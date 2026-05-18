@@ -49,6 +49,13 @@ namespace MonoGameExamenVliegtuig.Core.Graphics
 
             return _graphics.PreferredBackBufferWidth;
         }
+
+        public static float GetWindowHeight()
+        {
+            GraphicsFacadeNotInitializedException.ThrowIfNull(_graphics);
+
+            return _graphics.PreferredBackBufferHeight;
+        }
     }
 }
 

@@ -38,8 +38,8 @@ namespace MonoGameExamenVliegtuig.States
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
             spriteBatch.DrawString(Context.AssetsManager.GetFont(AssetsNames.GAME_FONT), "Menu. druk op 1 om 1 speler te starten.", Vector2.Zero, Color.White);
-            spriteBatch.DrawString(Context.AssetsManager.GetFont(AssetsNames.GAME_FONT), "Menu. druk op 2 om 2 spelers te starten.", Vector2.One * 20, Color.White);
-            spriteBatch.DrawString(Context.AssetsManager.GetFont(AssetsNames.GAME_FONT), "Menu. druk op 3 om de topscores te bekijken.", Vector2.One * 40, Color.White);
+            spriteBatch.DrawString(Context.AssetsManager.GetFont(AssetsNames.GAME_FONT), "Menu. druk op 2 om 2 spelers te starten.", Vector2.One * 40, Color.White);
+            spriteBatch.DrawString(Context.AssetsManager.GetFont(AssetsNames.GAME_FONT), "Menu. druk op 3 om de topscores te bekijken.", Vector2.One * 80, Color.White);
         }
     }
 }
