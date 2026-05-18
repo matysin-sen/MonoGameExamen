@@ -1,7 +1,10 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using MonoGameExamenVliegtuig.Extentions;
 using MonoGameExamenVliegtuig.Objects;
+using MonoGameExamenVliegtuig.Spawners;
+using MonoGameExamenVliegtuig.States.Base;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,16 +13,17 @@ using System.Threading.Tasks;
 
 namespace MonoGameExamenVliegtuig.States
 {
-    public  class PlayState
+    public  class PlayState : AbstractState
     {
-        private readonly EnemySpawner _enemySpawner;
+        private readonly EnemySpawner _enemySpawner;//spawner van enemys
 
         public PlayState(GameContext context)
             : base(context)
         {
             _enemySpawner = new EnemySpawner(
                 context.Enemies,
-                context.AssetsManager.GetTexture(AssetsNames.ENEMY1_TEXTURE));
+                context.AssetsManager.GetTexture(AssetsNames.ENEMY_PLANE1_TEXTURE));
+               
         }
 
         public override void Update(GameTime gameTime)
@@ -36,10 +40,10 @@ namespace MonoGameExamenVliegtuig.States
 
             _enemySpawner.Update(gameTime);
 
-            // TODO: Als een haai links uit beeld is, dan mag deze uit de lijst. Nu blijven de haaien oneindig in de lijst staan, ook al zijn ze al lang uit beeld.
+            // TODO: Als een object links uit beeld is, dan mag deze uit de lijst. Nu blijven de haaien oneindig in de lijst staan, ook al zijn ze al lang uit beeld.
 
-            if (WasKeyJustPressed(Keys.P))
-                Context.ChangeState(new PauseState(Context, this));
+            if (WasKeyJustPressed(Keys.Escape))
+                Context.ChangeState(new PauseMenuState(Context, this));
         }
 
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
@@ -47,7 +51,7 @@ namespace MonoGameExamenVliegtuig.States
             // TODO: Zet the background om naar een sprite
             spriteBatch.Draw(Context.AssetsManager.GetTexture(AssetsNames.BACKGROUND_TEXTURE),
                              Context.BackgroundPosition,
-                             Const.BACKGROUND_SCALE);
+                             GameSettings.BACKGROUND_SCALE);
 
             // TODO: We zouden bij het spawned van de haaien een bepaalde random scale kunnen geven aan een specifieke haai, zo zien sommige er groter uit dan anderen. Dit zou het speelveld interessanter maken. Nu hebben alle haaien dezelfde grootte.
             foreach (var enemySprite in Context.Enemies)
@@ -58,7 +62,7 @@ namespace MonoGameExamenVliegtuig.States
 
         private void UpdateBackgroundPosition()
         {
-            Context.BackgroundPosition = Context.BackgroundPosition with { X = Context.BackgroundPosition.X - Const.BACKGROUND_SPEED };
+            Context.BackgroundPosition = Context.BackgroundPosition with { X = Context.BackgroundPosition.X - GameSettings.BACKGROUND_SPEED };
         }
 
     }

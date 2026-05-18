@@ -301,11 +301,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\matys\\source\\repos\\hogent 25-26 programeren basis\\softwareontwerp\\MonoGameExamenVliegtuigSolution\\MonoGameExamenVliegtuig\\MonoGameExamenVliegtuig.csproj",
+      "projectUniqueName": "C:\\Users\\matys\\source\\repos\\hogent 25-26 programeren basis\\softwareontwerp\\MonoGameExamenVliegtuigSolution\\MonoGameExamen\\MonoGameExamenVliegtuig\\MonoGameExamenVliegtuig.csproj",
       "projectName": "MonoGameExamenVliegtuig",
-      "projectPath": "C:\\Users\\matys\\source\\repos\\hogent 25-26 programeren basis\\softwareontwerp\\MonoGameExamenVliegtuigSolution\\MonoGameExamenVliegtuig\\MonoGameExamenVliegtuig.csproj",
+      "projectPath": "C:\\Users\\matys\\source\\repos\\hogent 25-26 programeren basis\\softwareontwerp\\MonoGameExamenVliegtuigSolution\\MonoGameExamen\\MonoGameExamenVliegtuig\\MonoGameExamenVliegtuig.csproj",
       "packagesPath": "C:\\Users\\matys\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\matys\\source\\repos\\hogent 25-26 programeren basis\\softwareontwerp\\MonoGameExamenVliegtuigSolution\\MonoGameExamenVliegtuig\\obj\\",
+      "outputPath": "C:\\Users\\matys\\source\\repos\\hogent 25-26 programeren basis\\softwareontwerp\\MonoGameExamenVliegtuigSolution\\MonoGameExamen\\MonoGameExamenVliegtuig\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

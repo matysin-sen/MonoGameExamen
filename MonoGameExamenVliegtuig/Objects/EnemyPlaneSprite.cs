@@ -2,6 +2,7 @@
 using Microsoft.Xna.Framework.Graphics;
 using MonoGameExamenVliegtuig.Core.Objects;
 using MonoGameExamenVliegtuig.Movementstrategies;
+using MonoGameExamenVliegtuig.Objects.Base;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace MonoGameExamenVliegtuig.Objects
 {
-    public class EnemyPlaneSprite : Sprite
+    public class EnemyPlaneSprite : EnemySprite
     {
         private IPlaneMovementStratagy _movementStrategy;
 
@@ -18,7 +19,7 @@ namespace MonoGameExamenVliegtuig.Objects
         {
             _movementStrategy = movementStrategy;
         }
-        public override void Update(GameTime gameTime)
+        public override void Update()
         {
             _movementStrategy.update(this);
         }

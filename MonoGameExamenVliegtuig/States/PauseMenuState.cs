@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using MonoGameExamenVliegtuig.Objects;
 using MonoGameExamenVliegtuig.States.Base;
 using System;
 using System.Collections.Generic;
@@ -13,13 +14,13 @@ namespace MonoGameExamenVliegtuig.States
     public class PauseMenuState : AbstractState
     {
         public PlayState PreviousState { get; init; }// Property to hold a reference to the previous state of the game, allowing the pause menu to return to the previous state when unpaused
-        public PauseMenuState(Game1 context, PlayState previousState) : base(context)
+        public PauseMenuState(GameContext context, PlayState previousState) : base(context)
         {
             PreviousState = previousState;
         }
         public override void Update(GameTime gameTime)// Method called every frame to update the game logic for the pause menu state, such as handling input to unpause the game
         {
-            if (IsKeyDown(Keys.Enter))
+            if (WasKeyJustPressed(Keys.Escape))
                 Context.ChangeState(PreviousState);
         }
 
@@ -28,7 +29,7 @@ namespace MonoGameExamenVliegtuig.States
             PreviousState.Draw(gameTime, spriteBatch);
 
            
-            spriteBatch.DrawString(Context._gameFont, "Pause. Druk op enter om door te doen", Vector2.Zero, Color.White);
+            spriteBatch.DrawString(Context.AssetsManager.GetFont(AssetsNames.GAME_FONT), "Pause. Druk op escape om door te doen", Vector2.Zero, Color.White);
         }
     }
 }

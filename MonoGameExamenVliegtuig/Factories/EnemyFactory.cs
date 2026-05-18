@@ -10,30 +10,29 @@ using System.Threading.Tasks;
 
 namespace MonoGameExamenVliegtuig.Factories
 {
-    public class EnemyFactory
+    public static class EnemyFactory
     {
        
-            public EnemyPlaneSprite Create(Texture2D texture, float x, float y, float speed, float scale)
+            public static EnemyPlaneSprite Create(Texture2D texture, float x, float y, float speed, float scale)
             {
-                return new EnemyPlaneSprite(texture, new Vector2(x, y), speed, scale);
+                return Create(texture, new Vector2(x, y), speed, scale);
             }
         
 
-        public EnemyPlaneSprite Create(Texture2D texture, float x, float y, float speed, float scale)
+        public static EnemyPlaneSprite Create(Texture2D texture, Vector2 position, float speed, float scale)
         {
-            IPlaneMovementStratagy movementStrategy;
-
-
-            if (Random.Shared.Next(2) == 0)
+            // OPGEPAST: De volgende code zal random een movementStrategy genereren, dit is iets wat je meegeeft aan de Create van de Factory en veelal gegenereerd door een klasse
+            // Het hier random genereren is puur om het principe te tonen
+            var r = Random.Shared.Next(3);
+            IPlaneMovementStratagy movementStrategy = null;
+            switch (r)
             {
-                movementStrategy = new StraightMovementStrategy();
-            }
-            else
-            {
-                movementStrategy = new DiagonalMovementStrategy();
+                case 0: movementStrategy = new DiagonalMovementStrategy(); break;
+                case 1: movementStrategy = new StraightMovementStrategy(); break;
+                case 2: movementStrategy = new FastStraightMovementStrategy(); break;
             }
 
-            return new EnemyPlaneSprite(texture, new Vector2(x, y), movementStrategy);
+            return new EnemyPlaneSprite(texture, position,speed, movementStrategy,scale);
         }
     }
 }

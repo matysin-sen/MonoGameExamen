@@ -1,4 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
+using MonoGameExamenVliegtuig.Core.Exeptions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,25 +11,44 @@ namespace MonoGameExamenVliegtuig.Core.Graphics
     public static class GraphicsFacade
     {
         // static want er is er maar 1
-            private static GraphicsDeviceManager _graphics;
+        private static GraphicsDeviceManager _graphics;
 
-            public static void Initialize(GraphicsDeviceManager graphics)
-            {
-                _graphics = graphics;
-            }
+        public static void Initialize(Game game)
+        {
+            _graphics = new GraphicsDeviceManager(game);
+        }
+        public static void Initialize(Game game,int width, int height)
+        {
+            Initialize(game);
+            ChangeResolution(width, height);
+        }
 
-            public static int ScreenWidth
-                => _graphics.PreferredBackBufferWidth;
 
-            public static int ScreenHeight
-                => _graphics.PreferredBackBufferHeight;
 
-            public static void SetResolution(int width, int height)
-            {
-                _graphics.PreferredBackBufferWidth = width;
-                _graphics.PreferredBackBufferHeight = height;
-                _graphics.ApplyChanges();
-            }
+        public static void ChangeResolution(int width, int height)
+        {
+            GraphicsFacadeNotInitializedException.ThrowIfNull(_graphics);
+
+            _graphics.PreferredBackBufferHeight = height;
+            _graphics.PreferredBackBufferWidth = width;
+
+            _graphics.ApplyChanges();
+        }
+
+        public static float GetWindowVerticalCenter()
+        {
+            GraphicsFacadeNotInitializedException.ThrowIfNull(_graphics);
+
+            // * is a lot faster than /
+            return _graphics.PreferredBackBufferHeight * 0.5f;
+        }
+
+        public static float GetWindowWidth()
+        {
+            GraphicsFacadeNotInitializedException.ThrowIfNull(_graphics);
+
+            return _graphics.PreferredBackBufferWidth;
         }
     }
+}
 

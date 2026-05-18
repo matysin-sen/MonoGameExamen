@@ -29,5 +29,10 @@ namespace MonoGameExamenVliegtuig.Input
         {
             return KeyboardFacade.IsKeyDown(Keys.Down, Keys.S);
         }
+
+        public bool shutDown()
+        {
+            return KeyboardFacade.IsKeyDown(Keys.X);
+        }
     }
 }

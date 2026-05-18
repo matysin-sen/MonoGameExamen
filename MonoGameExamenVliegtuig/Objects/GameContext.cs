@@ -1,5 +1,9 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using MonoGameExamenVliegtuig.Core.Assets;
+using MonoGameExamenVliegtuig.Factories;
+using MonoGameExamenVliegtuig.Input;
+using MonoGameExamenVliegtuig.Objects.Base;
 using MonoGameExamenVliegtuig.States;
 using MonoGameExamenVliegtuig.States.Base;
 using System;
@@ -19,9 +23,9 @@ namespace MonoGameExamenVliegtuig.Objects
 
         public List<EnemySprite> Enemies { get; set; }
 
-        public List<TreeSprite> trees { get; set; }
+       // public List<TreeSprite> Trees { get; set; }
 
-        public List<HouseSprite> houses { get; set; }
+        //public List<HouseSprite> Houses { get; set; }
 
         public AssetsManager AssetsManager { get; }
 
@@ -29,7 +33,7 @@ namespace MonoGameExamenVliegtuig.Objects
 
         public GameSettings gameSettings { get;}
 
-        public GameContext(Game game, GameSettings settings)
+        public GameContext(Game game)
         {
             BackgroundPosition = new Vector2(0, 0);
             Enemies = new List<EnemySprite>();
@@ -38,8 +42,8 @@ namespace MonoGameExamenVliegtuig.Objects
 
             // Dit moet na LoadContent want we hebben de texture nodig
             Player = PlayerFactory.CreatePlayerInVerticalCenter(AssetsManager.GetTexture(AssetsNames.PLAYER_TEXTURE),
-                                                                Const.PLAYER_SPEED,
-                                                                Const.PLAYER_SCALE,
+                                                                GameSettings.PLAYER_SPEED,
+                                                                GameSettings.PLAYER_SCALE,
                                                                 new PlayerInputService());
 
             CurrentState = new MenuState(this);

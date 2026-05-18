@@ -13,13 +13,6 @@
 
 #---------------------------------- Content ---------------------------------#
 
-#begin ../../../../../../../Downloads/2025-26_S2_Eind-Evaluatie-main/2025-26_S2_Eind-Evaluatie-main/MonoGame/Assets/Fonts/game-font.spritefont
-/importer:FontDescriptionImporter
-/processor:FontDescriptionProcessor
-/processorParam:PremultiplyAlpha=True
-/processorParam:TextureFormat=Compressed
-/build:../../../../../../../Downloads/2025-26_S2_Eind-Evaluatie-main/2025-26_S2_Eind-Evaluatie-main/MonoGame/Assets/Fonts/game-font.spritefont;game-font.spritefont
-
 #begin background.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -55,6 +48,13 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:enemy_plane2.png
+
+#begin game-font.spritefont
+/importer:FontDescriptionImporter
+/processor:FontDescriptionProcessor
+/processorParam:PremultiplyAlpha=True
+/processorParam:TextureFormat=Compressed
+/build:game-font.spritefont
 
 #begin house_blue.png
 /importer:TextureImporter

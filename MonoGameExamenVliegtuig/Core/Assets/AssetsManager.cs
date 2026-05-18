@@ -1,4 +1,5 @@
-﻿using Microsoft.Xna.Framework.Content;
+﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using System;
 using System.Collections.Generic;
@@ -10,14 +11,18 @@ namespace MonoGameExamenVliegtuig.Core.Assets
 {
     public class AssetsManager
     {
-        private ContentManager _content;
+        private ContentManager _contentManager;
 
         private Dictionary<string, Texture2D> _textures
             = new();        //dictionary want we willen de namen er uit halen en dat dan specifieke ding laden
+       
+        private  Dictionary<string, SpriteFont> _fontAssets;
 
-        public AssetsManager(ContentManager content)
+        public AssetsManager(Game game)
         {
-            _content = content;
+            _contentManager = game.Content;
+            _fontAssets = new Dictionary<string, SpriteFont>();
+            _textures = new Dictionary<string, Texture2D>();
         }
 
         public Texture2D GetTexture(string name)
@@ -25,10 +30,21 @@ namespace MonoGameExamenVliegtuig.Core.Assets
             if (!_textures.ContainsKey(name))
             {
                 _textures[name] =
-                    _content.Load<Texture2D>(name);
+                    _contentManager.Load<Texture2D>(name);
             }
 
             return _textures[name];
+        }
+
+        public SpriteFont GetFont(string name)
+        {
+            if (!_fontAssets.TryGetValue(name, out var font))
+            {
+                font = _contentManager.Load<SpriteFont>(name);
+                _fontAssets.Add(name, font);
+            }
+
+            return font;
         }
     }
 }

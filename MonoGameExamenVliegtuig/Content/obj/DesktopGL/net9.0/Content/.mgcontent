@@ -4,18 +4,18 @@
   <Platform>DesktopGL</Platform>
   <Config />
   <SourceFiles>
-    <File>C:/Users/matys/source/repos/hogent 25-26 programeren basis/softwareontwerp/MonoGameExamenVliegtuigSolution/MonoGameExamenVliegtuig/Content/../../../../../../../Downloads/2025-26_S2_Eind-Evaluatie-main/2025-26_S2_Eind-Evaluatie-main/MonoGame/Assets/Fonts/game-font.spritefont</File>
-    <File>C:/Users/matys/source/repos/hogent 25-26 programeren basis/softwareontwerp/MonoGameExamenVliegtuigSolution/MonoGameExamenVliegtuig/Content/background.png</File>
-    <File>C:/Users/matys/source/repos/hogent 25-26 programeren basis/softwareontwerp/MonoGameExamenVliegtuigSolution/MonoGameExamenVliegtuig/Content/enemy_plane1.png</File>
-    <File>C:/Users/matys/source/repos/hogent 25-26 programeren basis/softwareontwerp/MonoGameExamenVliegtuigSolution/MonoGameExamenVliegtuig/Content/enemy_plane2.png</File>
-    <File>C:/Users/matys/source/repos/hogent 25-26 programeren basis/softwareontwerp/MonoGameExamenVliegtuigSolution/MonoGameExamenVliegtuig/Content/house_blue.png</File>
-    <File>C:/Users/matys/source/repos/hogent 25-26 programeren basis/softwareontwerp/MonoGameExamenVliegtuigSolution/MonoGameExamenVliegtuig/Content/house_red.png</File>
-    <File>C:/Users/matys/source/repos/hogent 25-26 programeren basis/softwareontwerp/MonoGameExamenVliegtuigSolution/MonoGameExamenVliegtuig/Content/plane.png</File>
-    <File>C:/Users/matys/source/repos/hogent 25-26 programeren basis/softwareontwerp/MonoGameExamenVliegtuigSolution/MonoGameExamenVliegtuig/Content/tree.png</File>
-    <File>C:/Users/matys/source/repos/hogent 25-26 programeren basis/softwareontwerp/MonoGameExamenVliegtuigSolution/MonoGameExamenVliegtuig/Content/trees.png</File>
+    <File>C:/Users/matys/source/repos/hogent 25-26 programeren basis/softwareontwerp/MonoGameExamenVliegtuigSolution/MonoGameExamen/MonoGameExamenVliegtuig/Content/background.png</File>
+    <File>C:/Users/matys/source/repos/hogent 25-26 programeren basis/softwareontwerp/MonoGameExamenVliegtuigSolution/MonoGameExamen/MonoGameExamenVliegtuig/Content/enemy_plane1.png</File>
+    <File>C:/Users/matys/source/repos/hogent 25-26 programeren basis/softwareontwerp/MonoGameExamenVliegtuigSolution/MonoGameExamen/MonoGameExamenVliegtuig/Content/enemy_plane2.png</File>
+    <File>C:/Users/matys/source/repos/hogent 25-26 programeren basis/softwareontwerp/MonoGameExamenVliegtuigSolution/MonoGameExamen/MonoGameExamenVliegtuig/Content/game-font.spritefont</File>
+    <File>C:/Users/matys/source/repos/hogent 25-26 programeren basis/softwareontwerp/MonoGameExamenVliegtuigSolution/MonoGameExamen/MonoGameExamenVliegtuig/Content/house_blue.png</File>
+    <File>C:/Users/matys/source/repos/hogent 25-26 programeren basis/softwareontwerp/MonoGameExamenVliegtuigSolution/MonoGameExamen/MonoGameExamenVliegtuig/Content/house_red.png</File>
+    <File>C:/Users/matys/source/repos/hogent 25-26 programeren basis/softwareontwerp/MonoGameExamenVliegtuigSolution/MonoGameExamen/MonoGameExamenVliegtuig/Content/plane.png</File>
+    <File>C:/Users/matys/source/repos/hogent 25-26 programeren basis/softwareontwerp/MonoGameExamenVliegtuigSolution/MonoGameExamen/MonoGameExamenVliegtuig/Content/tree.png</File>
+    <File>C:/Users/matys/source/repos/hogent 25-26 programeren basis/softwareontwerp/MonoGameExamenVliegtuigSolution/MonoGameExamen/MonoGameExamenVliegtuig/Content/trees.png</File>
   </SourceFiles>
   <DestFiles>
-    <File>game-font.spritefont</File>
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

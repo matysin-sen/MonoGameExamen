@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using MonoGameExamenVliegtuig.Core.Objects;
+using MonoGameExamenVliegtuig.Input;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -33,6 +34,9 @@ namespace MonoGameExamenVliegtuig.Objects
 
             if (_inputService.ShouldGoDown())
                 UpdatePositionY(+Speed);
+
+            if(_inputService.shutDown())
+                Environment.Exit(0);//sluit het spel af
         }
     }
 }

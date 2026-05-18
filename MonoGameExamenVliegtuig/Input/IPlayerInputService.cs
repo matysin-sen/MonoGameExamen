@@ -12,5 +12,7 @@ namespace MonoGameExamenVliegtuig.Input
         public bool ShouldGoLeft();
         public bool ShouldGoUp();
         public bool ShouldGoDown();
+
+        public bool shutDown();
     }
 }

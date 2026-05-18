@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "YT46zGQ1mBQ=",
+  "dgSpecHash": "6qqGVM01isg=",
   "success": true,
-  "projectFilePath": "C:\\Users\\matys\\source\\repos\\hogent 25-26 programeren basis\\softwareontwerp\\MonoGameExamenVliegtuigSolution\\MonoGameExamenVliegtuig\\MonoGameExamenVliegtuig.csproj",
+  "projectFilePath": "C:\\Users\\matys\\source\\repos\\hogent 25-26 programeren basis\\softwareontwerp\\MonoGameExamenVliegtuigSolution\\MonoGameExamen\\MonoGameExamenVliegtuig\\MonoGameExamenVliegtuig.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\matys\\.nuget\\packages\\monogame.content.builder.task\\3.8.4.1\\monogame.content.builder.task.3.8.4.1.nupkg.sha512",
     "C:\\Users\\matys\\.nuget\\packages\\monogame.framework.desktopgl\\3.8.4.1\\monogame.framework.desktopgl.3.8.4.1.nupkg.sha512",
