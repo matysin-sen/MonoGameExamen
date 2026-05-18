@@ -37,8 +37,37 @@ namespace MonoGameExamenVliegtuig.States
             foreach (var enemy in Context.Enemies)
                 enemy.Update();
 
-            // TODO: Controlleer of de speler een vliegtuig aanraakt. Indien 'ja', ga naar de GameOver staat.
+           
+            // 1. Maak een onzichtbare rechthoek (hitbox) rondom de speler
+            Rectangle playerRect = new Rectangle(
+                (int)Context.Player.Position.X,
+                (int)Context.Player.Position.Y,
+                (int)(Context.Player.Texture.Width * Context.Player.Scale),
+                (int)(Context.Player.Texture.Height * Context.Player.Scale)
+            );
 
+            // 2. Loop door alle vijanden heen om te kijken of ze de speler raken
+            foreach (var enemy in Context.Enemies)
+            {
+                // Maak een hitbox rondom de huidige vijand
+                Rectangle enemyRect = new Rectangle(
+                    (int)enemy.Position.X,
+                    (int)enemy.Position.Y,
+                    (int)(enemy.Texture.Width * enemy.Scale),
+                    (int)(enemy.Texture.Height * enemy.Scale)
+                );
+
+                // 3. Controleer of de hitbox van de speler die van de vijand raakt (Intersects)
+                if (playerRect.Intersects(enemyRect))
+                {
+                    // Ja! Ze raken elkaar. Verander de status naar GameOver.
+                    Context.ChangeState(new GameOverState(Context));
+
+                    // Zodra je af bent, hoef je de andere vliegtuigen niet meer te checken
+                    break;
+                }
+            }
+            Context.Enemies.RemoveAll(enemy => enemy.Position.Y > 650);// ruimt alle vlietuigen op die onder het scherm zijn, zodat ze niet oneindig in de lijst blijven staan
             _enemySpawner.Update(gameTime);
 
             // TODO: Als een object links uit beeld is, dan mag deze uit de lijst. Nu blijven de haaien oneindig in de lijst staan, ook al zijn ze al lang uit beeld.

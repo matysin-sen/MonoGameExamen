@@ -11,7 +11,7 @@ namespace MonoGameExamenVliegtuig.Movementstrategies
     {
         public void update(EnemyPlaneSprite plane)
         {
-           plane.UpdatePosition(-plane.Speed, plane.Speed*0.25F);
+           plane.UpdatePosition(plane.Speed*0.25F, plane.Speed);
         }
     }
 }
