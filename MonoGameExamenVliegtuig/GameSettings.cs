@@ -8,7 +8,7 @@ namespace MonoGameExamenVliegtuig
 {
     public class GameSettings
     {
-        public const int PLANE_SPAWN_TIME_MS = 1000;// Constant to define the time interval (in milliseconds) for spawning new planes in the game
+       
 
         public const int PLAYER_SPEED = 5;// Constant to define the speed of the player
         public const float PLAYER_SCALE = 1f;// Constant to define the scale of the player sprite, allowing for resizing the player character in the game
@@ -24,6 +24,7 @@ namespace MonoGameExamenVliegtuig
 
         public const int TREES_SPEED = BACKGROUND_SPEED;
         public const float TREES_SCALE = 1F;
+
 
     }
 }

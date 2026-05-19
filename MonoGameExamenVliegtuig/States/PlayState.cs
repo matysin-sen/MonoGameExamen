@@ -25,14 +25,25 @@ namespace MonoGameExamenVliegtuig.States
         {
             _enemySpawner = new EnemySpawner(
                 context.Enemies,
-                context.AssetsManager.GetTexture(AssetsNames.ENEMY_PLANE1_TEXTURE));// Of ENEMY_PLANE2_TEXTURE
+                new Texture2D[]
+                 {
+                     context.AssetsManager.GetTexture(AssetsNames.ENEMY_PLANE1_TEXTURE),
+                     context.AssetsManager.GetTexture(AssetsNames.ENEMY_PLANE2_TEXTURE)
+                 }); //kiest hier random een van de 2 textures voor de vijanden, en geeft deze mee aan de spawner, zodat deze ze kan gebruiken om nieuwe vijanden te maken
             _houseSpawner = new HouseSpawner(
                 context.Houses,
-                 context.AssetsManager.GetTexture(AssetsNames.HOUSE_BLUE_TEXTURE)); // Of HOUSE_RED_TEXTURE
+                 new Texture2D[]
+                 {
+                     context.AssetsManager.GetTexture(AssetsNames.HOUSE_BLUE_TEXTURE),
+                     context.AssetsManager.GetTexture(AssetsNames.HOUSE_RED_TEXTURE)
+                 }); 
             _treeSpawners = new TreeSpawners(
                 context.Trees,
-                context.AssetsManager.GetTexture(AssetsNames.TREE_TEXTURE)
-            );
+               new Texture2D[]
+        {
+            context.AssetsManager.GetTexture(AssetsNames.TREE_TEXTURE),
+            context.AssetsManager.GetTexture(AssetsNames.TREES_TEXTURE)
+        });
 
         }
 
@@ -50,14 +61,15 @@ namespace MonoGameExamenVliegtuig.States
 
             foreach (var house in Context.Houses)
                 house.Update();
+            _treeSpawners.Update(gameTime);
             foreach (var tree in Context.Trees)
                 tree.Update();
 
             // Verwijder huizen die het scherm gepasseerd zijn
-            Context.Houses.RemoveAll(house => house.Position.Y > 650);
+            Context.Houses.RemoveAll(house => house.Position.Y > GraphicsFacade.GetWindowHeight());
 
             
-            Context.Trees.RemoveAll(tree => tree.Position.Y > 650);
+            Context.Trees.RemoveAll(tree => tree.Position.Y > GraphicsFacade.GetWindowHeight());
             // --- Controleer botsingen met Vijanden ---
             // 1. Maak een onzichtbare rechthoek (hitbox) rondom de speler
             Rectangle playerRect = new Rectangle(
@@ -125,7 +137,7 @@ namespace MonoGameExamenVliegtuig.States
                     break; // Stop met zoeken
                 }
             }
-            Context.Enemies.RemoveAll(enemy => enemy.Position.Y > 650);// ruimt alle vlietuigen op die onder het scherm zijn, zodat ze niet oneindig in de lijst blijven staan
+            Context.Enemies.RemoveAll(enemy => enemy.Position.Y > GraphicsFacade.GetWindowHeight());// ruimt alle vlietuigen op die onder het scherm zijn, zodat ze niet oneindig in de lijst blijven staan
             _enemySpawner.Update(gameTime);
 
             // TODO: Als een object links uit beeld is, dan mag deze uit de lijst. Nu blijven de haaien oneindig in de lijst staan, ook al zijn ze al lang uit beeld.
