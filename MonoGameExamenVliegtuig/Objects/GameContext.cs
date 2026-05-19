@@ -19,7 +19,9 @@ namespace MonoGameExamenVliegtuig.Objects
         // We houden bij welke staat de huidige is. Afhankelijk van de staat, zullen we andere dingen doen in de update en draw methodes.
         public AbstractState CurrentState { get; private set; }
 
-        public PlayerSprite Player { get; private set; }
+        public PlayerSprite Player { get;  set; }
+        public PlayerSprite Player2 { get;  set; }
+        public bool IsMultiplayer { get; set; } = false; // bijhouden of we in multiplayer modus zitten of niet, zodat we kunnen bepalen of we player 2 moeten updaten en tekenen
 
         public List<EnemySprite> Enemies { get; set; }
 
@@ -47,7 +49,7 @@ namespace MonoGameExamenVliegtuig.Objects
             Player = PlayerFactory.CreatePlayerInVerticalCenter(AssetsManager.GetTexture(AssetsNames.PLAYER_TEXTURE),
                                                                 GameSettings.PLAYER_SPEED,
                                                                 GameSettings.PLAYER_SCALE,
-                                                                new PlayerInputService());
+                                                                new PlayerInputService(this));
 
             CurrentState = new MenuState(this);
         }

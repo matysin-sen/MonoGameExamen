@@ -1,5 +1,6 @@
 ﻿using Microsoft.Xna.Framework.Input;
 using MonoGameExamenVliegtuig.Core.Input;
+using MonoGameExamenVliegtuig.Objects;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,24 +11,61 @@ namespace MonoGameExamenVliegtuig.Input
 {
     public class PlayerInputService: IPlayerInputService
     {
+        private readonly GameContext _gameContext;
+        public PlayerInputService(GameContext gameContext)
+        {
+            _gameContext = gameContext;
+        }
+
+
         public bool ShouldGoRight()
         {
-            return KeyboardFacade.IsKeyDown(Keys.Right, Keys.D);
+            if(_gameContext.IsMultiplayer == true)
+            {
+                return KeyboardFacade.IsKeyDown(Keys.D);
+            }
+            else
+            {
+                return KeyboardFacade.IsKeyDown(Keys.Right, Keys.D);
+            }
+            
         }
 
         public bool ShouldGoLeft()
         {
-            return KeyboardFacade.IsKeyDown(Keys.Left, Keys.Q);
+            if (_gameContext.IsMultiplayer == true)
+            {
+                return KeyboardFacade.IsKeyDown(Keys.Q);
+            }
+            else
+            {
+                return KeyboardFacade.IsKeyDown(Keys.Left, Keys.Q);
+            }
+               
         }
 
         public bool ShouldGoUp()
         {
-            return KeyboardFacade.IsKeyDown(Keys.Up, Keys.Z);
+            if (_gameContext.IsMultiplayer == true)
+            {
+                return KeyboardFacade.IsKeyDown(Keys.Z);
+            }
+            else
+            {
+                return KeyboardFacade.IsKeyDown(Keys.Up, Keys.Z);
+            }
         }
 
         public bool ShouldGoDown()
         {
-            return KeyboardFacade.IsKeyDown(Keys.Down, Keys.S);
+            if (_gameContext.IsMultiplayer == true)
+            {
+                return KeyboardFacade.IsKeyDown(Keys.S);
+            }
+            else
+            {
+                return KeyboardFacade.IsKeyDown(Keys.Down, Keys.S);
+            }
         }
 
         public bool shutDown()

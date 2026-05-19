@@ -53,6 +53,11 @@ namespace MonoGameExamenVliegtuig.States
             UpdateBackgroundPosition();
 
             Context.Player.Update();
+            
+            if (Context.IsMultiplayer== true)// kijken of multiplayer aan staat, zo ja, update dan ook de tweede speler
+            {
+                Context.Player2.Update();
+            }
 
             foreach (var enemy in Context.Enemies)
                 enemy.Update();
@@ -145,8 +150,58 @@ namespace MonoGameExamenVliegtuig.States
                 }
             }
            
+            if(Context.IsMultiplayer == true && Context.Player2 != null)// kijken of multiplayer aan staat, zo ja, check dan ook de botsingen voor de tweede speler en kijk ook of player2 niet null is, omdat deze anders nog niet is gemaakt in het begin van het spel, en je dan een null reference error krijgt
+            {
+                Rectangle player2Rect = new Rectangle(
+                (int)Context.Player2.Position.X,
+                (int)Context.Player2.Position.Y,
+                (int)(Context.Player2.Texture.Width * Context.Player2.Scale),
+                (int)(Context.Player2.Texture.Height * Context.Player2.Scale)
+            );
+                foreach (var enemy in Context.Enemies)
+                {
+                    Rectangle enemyRect = new Rectangle(
+                        (int)enemy.Position.X,
+                        (int)enemy.Position.Y,
+                        (int)(enemy.Texture.Width * enemy.Scale),
+                        (int)(enemy.Texture.Height * enemy.Scale)
+                    );
+                    if (player2Rect.Intersects(enemyRect))
+                    {
+                        Context.ChangeState(new GameOverState(Context));
+                        break;
+                    }
+                }
+                foreach (var house in Context.Houses)
+                {
+                    Rectangle houseRect = new Rectangle(
+                        (int)house.Position.X,
+                        (int)house.Position.Y,
+                        (int)(house.Texture.Width * house.Scale),
+                        (int)(house.Texture.Height * house.Scale)
+                    );
+                    if (player2Rect.Intersects(houseRect))
+                    {
+                        Context.ChangeState(new GameOverState(Context));
+                        break;
+                    }
+                }
+                foreach (var tree in Context.Trees)
+                {
+                    Rectangle treeRect = new Rectangle(
+                        (int)tree.Position.X,
+                        (int)tree.Position.Y,
+                        (int)(tree.Texture.Width * tree.Scale),
+                        (int)(tree.Texture.Height * tree.Scale)
+                    );
+                    if (player2Rect.Intersects(treeRect))
+                    {
+                        Context.ChangeState(new GameOverState(Context));
+                        break;
+                    }
+                }
+            }
 
-            
 
             if (WasKeyJustPressed(Keys.Escape))
                 Context.ChangeState(new PauseMenuState(Context, this));
@@ -174,6 +229,11 @@ namespace MonoGameExamenVliegtuig.States
                 enemySprite.Draw(spriteBatch);
 
             Context.Player.Draw(spriteBatch);
+
+            if (Context.IsMultiplayer == true)// kijken of multiplayer aan staat, zo ja, teken dan ook de tweede speler
+            {
+                Context.Player2.Draw(spriteBatch);
+            }
 
             SpriteFont font = Context.AssetsManager.GetFont(AssetsNames.GAME_FONT);
 

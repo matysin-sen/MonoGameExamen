@@ -2,6 +2,8 @@
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using MonoGameExamenVliegtuig.Extentions;
+using MonoGameExamenVliegtuig.Factories;
+using MonoGameExamenVliegtuig.Input;
 using MonoGameExamenVliegtuig.Objects;
 using MonoGameExamenVliegtuig.States.Base;
 using System;
@@ -28,6 +30,13 @@ namespace MonoGameExamenVliegtuig.States
             }
             if (IsKeyDown(Keys.NumPad2))// 2 spelers
             {
+                Context.IsMultiplayer = true;
+                // maak speler 2 aan en zet deze in de context
+                Context.Player2 = PlayerFactory.CreatePlayerInVerticalCenter(
+                 Context.AssetsManager.GetTexture(AssetsNames.PLAYER_TEXTURE),
+                  GameSettings.PLAYER_SPEED,
+                  GameSettings.PLAYER_SCALE,
+                  new Player2InputService());
                 Context.ChangeState(new PlayState(Context));
             }
             if (IsKeyDown(Keys.NumPad3))//topscores
