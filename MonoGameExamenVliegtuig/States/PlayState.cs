@@ -66,10 +66,17 @@ namespace MonoGameExamenVliegtuig.States
                 tree.Update();
 
             // Verwijder huizen die het scherm gepasseerd zijn
-            Context.Houses.RemoveAll(house => house.Position.Y > GraphicsFacade.GetWindowHeight());
+           int ontwekenhuizen= Context.Houses.RemoveAll(house => house.Position.Y > GraphicsFacade.GetWindowHeight());
+            Context.Score += ontwekenhuizen; // Tel 1 punt op voor elk ontweken huis
 
-            
-            Context.Trees.RemoveAll(tree => tree.Position.Y > GraphicsFacade.GetWindowHeight());
+            int ontwekenbomen= Context.Trees.RemoveAll(tree => tree.Position.Y > GraphicsFacade.GetWindowHeight());
+            Context.Score += ontwekenbomen; // Tel 1 punt op voor elk ontweken boom
+           int ontwekenvliegtuigen= Context.Enemies.RemoveAll(enemy => enemy.Position.Y > GraphicsFacade.GetWindowHeight());// ruimt alle vlietuigen op die onder het scherm zijn, zodat ze niet oneindig in de lijst blijven staan
+            Context.Score += ontwekenvliegtuigen; // Tel 1 punt op voor elk ontweken vliegtuig
+
+            _enemySpawner.Update(gameTime);
+            _houseSpawner.Update(gameTime);
+            _treeSpawners.Update(gameTime); 
             // --- Controleer botsingen met Vijanden ---
             // 1. Maak een onzichtbare rechthoek (hitbox) rondom de speler
             Rectangle playerRect = new Rectangle(
@@ -137,10 +144,9 @@ namespace MonoGameExamenVliegtuig.States
                     break; // Stop met zoeken
                 }
             }
-            Context.Enemies.RemoveAll(enemy => enemy.Position.Y > GraphicsFacade.GetWindowHeight());// ruimt alle vlietuigen op die onder het scherm zijn, zodat ze niet oneindig in de lijst blijven staan
-            _enemySpawner.Update(gameTime);
+           
 
-            // TODO: Als een object links uit beeld is, dan mag deze uit de lijst. Nu blijven de haaien oneindig in de lijst staan, ook al zijn ze al lang uit beeld.
+            
 
             if (WasKeyJustPressed(Keys.Escape))
                 Context.ChangeState(new PauseMenuState(Context, this));
@@ -168,6 +174,11 @@ namespace MonoGameExamenVliegtuig.States
                 enemySprite.Draw(spriteBatch);
 
             Context.Player.Draw(spriteBatch);
+
+            SpriteFont font = Context.AssetsManager.GetFont(AssetsNames.GAME_FONT);
+
+            // Teken de tekst linksboven in de hoek (X=10, Y=10)
+            spriteBatch.DrawString(font, "Score: " + Context.Score, new Vector2(10, 10), Color.White);
         }
 
         private void UpdateBackgroundPosition()

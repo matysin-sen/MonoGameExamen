@@ -48,7 +48,7 @@ namespace MonoGameExamenVliegtuig
 
         protected override void Update(GameTime gameTime)// Method called every frame to update the game logic, such as handling input, moving objects, etc.
         {
-            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
+            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.X))
                 Exit();
 
             KeyboardFacade.Update();  

@@ -32,6 +32,7 @@ namespace MonoGameExamenVliegtuig.Objects
         public Vector2 BackgroundPosition { get; set; }
 
         public GameSettings gameSettings { get;}
+        public int Score { get; set; } = 0;
 
         public GameContext(Game game)
         {

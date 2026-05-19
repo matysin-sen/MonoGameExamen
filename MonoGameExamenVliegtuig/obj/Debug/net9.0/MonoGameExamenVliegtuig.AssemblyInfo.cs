@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MonoGameExamenVliegtuig")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a3ff0ec0595c049966e29c1387a9be6f6adea882")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+faf513a5105768a5d59e012e72123a0f6823e032")]
 [assembly: System.Reflection.AssemblyProductAttribute("MonoGameExamenVliegtuig")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MonoGameExamenVliegtuig")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

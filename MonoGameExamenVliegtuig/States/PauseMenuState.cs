@@ -24,12 +24,13 @@ namespace MonoGameExamenVliegtuig.States
                 Context.ChangeState(PreviousState);
         }
 
-        public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)// Method called every frame to draw the pause menu on the screen, including the previous state in the background and a message prompting the player to press Enter to unpause
+        public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)// Method called every frame to draw the pause menu on the screen, including the previous state in the background and a message prompting the player to press escape to unpause
         {
             PreviousState.Draw(gameTime, spriteBatch);
 
            
-            spriteBatch.DrawString(Context.AssetsManager.GetFont(AssetsNames.GAME_FONT), "Pause. Druk op escape om door te doen", Vector2.Zero, Color.White);
+            spriteBatch.DrawString(Context.AssetsManager.GetFont(AssetsNames.GAME_FONT), "-- Pause --", new Vector2(100, 100), Color.White);
+            spriteBatch.DrawString(Context.AssetsManager.GetFont(AssetsNames.GAME_FONT), $"Druk op escape \nom door te doen", new Vector2(50, 200), Color.White);// dit is voor aan te tonen dat het op meerdere manieren kan
         }
     }
 }
