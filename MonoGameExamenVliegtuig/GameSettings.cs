@@ -19,8 +19,11 @@ namespace MonoGameExamenVliegtuig
         public const int BACKGROUND_SPEED = 2;
         public const float BACKGROUND_SCALE = 0.5F;
 
-        public const int HOUSE_SPEED = 2;
-        public const float HOUSE_SCALE = 0.25F;
+        public const int HOUSE_SPEED = BACKGROUND_SPEED;
+        public const float HOUSE_SCALE = 1F;
+
+        public const int TREES_SPEED = BACKGROUND_SPEED;
+        public const float TREES_SCALE = 1F;
 
     }
 }

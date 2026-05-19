@@ -10,5 +10,7 @@ namespace MonoGameExamenVliegtuig.Movementstrategies
     public interface IPlaneMovementStratagy
     {
         void update(EnemyPlaneSprite plane);
+        void update(HouseSprite houseSprite);
+        void update(TreeSprite treeSprite);
     }
 }

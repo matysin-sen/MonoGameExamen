@@ -17,14 +17,23 @@ namespace MonoGameExamenVliegtuig.States
     public  class PlayState : AbstractState
     {
         private readonly EnemySpawner _enemySpawner;//spawner van enemys
+        private readonly HouseSpawner _houseSpawner;
+        private readonly TreeSpawners _treeSpawners;
 
         public PlayState(GameContext context)
             : base(context)
         {
             _enemySpawner = new EnemySpawner(
                 context.Enemies,
-                context.AssetsManager.GetTexture(AssetsNames.ENEMY_PLANE1_TEXTURE));
-               
+                context.AssetsManager.GetTexture(AssetsNames.ENEMY_PLANE1_TEXTURE));// Of ENEMY_PLANE2_TEXTURE
+            _houseSpawner = new HouseSpawner(
+                context.Houses,
+                 context.AssetsManager.GetTexture(AssetsNames.HOUSE_BLUE_TEXTURE)); // Of HOUSE_RED_TEXTURE
+            _treeSpawners = new TreeSpawners(
+                context.Trees,
+                context.AssetsManager.GetTexture(AssetsNames.TREE_TEXTURE)
+            );
+
         }
 
         public override void Update(GameTime gameTime)
@@ -37,7 +46,19 @@ namespace MonoGameExamenVliegtuig.States
             foreach (var enemy in Context.Enemies)
                 enemy.Update();
 
-           
+            _houseSpawner.Update(gameTime);
+
+            foreach (var house in Context.Houses)
+                house.Update();
+            foreach (var tree in Context.Trees)
+                tree.Update();
+
+            // Verwijder huizen die het scherm gepasseerd zijn
+            Context.Houses.RemoveAll(house => house.Position.Y > 650);
+
+            
+            Context.Trees.RemoveAll(tree => tree.Position.Y > 650);
+            // --- Controleer botsingen met Vijanden ---
             // 1. Maak een onzichtbare rechthoek (hitbox) rondom de speler
             Rectangle playerRect = new Rectangle(
                 (int)Context.Player.Position.X,
@@ -67,6 +88,43 @@ namespace MonoGameExamenVliegtuig.States
                     break;
                 }
             }
+            // --- Controleer botsingen met Huizen ---
+            foreach (var house in Context.Houses)
+            {
+                // Maak een hitbox rondom het huis
+                Rectangle houseRect = new Rectangle(
+                    (int)house.Position.X,
+                    (int)house.Position.Y,
+                    (int)(house.Texture.Width * house.Scale),
+                    (int)(house.Texture.Height * house.Scale)
+                );
+
+                // Controleer of de speler het huis raakt
+                if (playerRect.Intersects(houseRect))
+                {
+                    Context.ChangeState(new GameOverState(Context));
+                    break; // Stop met zoeken, je bent toch al af
+                }
+            }
+
+            // --- Controleer botsingen met Bomen ---
+            foreach (var tree in Context.Trees)
+            {
+                // Maak een hitbox rondom de boom
+                Rectangle treeRect = new Rectangle(
+                    (int)tree.Position.X,
+                    (int)tree.Position.Y,
+                    (int)(tree.Texture.Width * tree.Scale),
+                    (int)(tree.Texture.Height * tree.Scale)
+                );
+
+                // Controleer of de speler de boom raakt
+                if (playerRect.Intersects(treeRect))
+                {
+                    Context.ChangeState(new GameOverState(Context));
+                    break; // Stop met zoeken
+                }
+            }
             Context.Enemies.RemoveAll(enemy => enemy.Position.Y > 650);// ruimt alle vlietuigen op die onder het scherm zijn, zodat ze niet oneindig in de lijst blijven staan
             _enemySpawner.Update(gameTime);
 
@@ -78,7 +136,7 @@ namespace MonoGameExamenVliegtuig.States
 
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
-            // TODO: Zet the background om naar een sprite
+            
 
             var backgroundTexture = Context.AssetsManager.GetTexture(AssetsNames.BACKGROUND_TEXTURE);
             spriteBatch.Draw(backgroundTexture,
@@ -89,7 +147,11 @@ namespace MonoGameExamenVliegtuig.States
             spriteBatch.Draw(backgroundTexture,
                              background2Position,
                              GameSettings.BACKGROUND_SCALE);
-            // TODO: We zouden bij het spawned van de haaien een bepaalde random scale kunnen geven aan een specifieke haai, zo zien sommige er groter uit dan anderen. Dit zou het speelveld interessanter maken. Nu hebben alle haaien dezelfde grootte.
+            // moet ervoor anders vliegt de speler over de achtergrond heen, terwijl die eronder hoort te zijn
+            foreach (var house in Context.Houses)
+                house.Draw(spriteBatch);
+            foreach (var tree in Context.Trees)
+                tree.Draw(spriteBatch);
             foreach (var enemySprite in Context.Enemies)
                 enemySprite.Draw(spriteBatch);
 

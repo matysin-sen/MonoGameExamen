@@ -23,9 +23,9 @@ namespace MonoGameExamenVliegtuig.Objects
 
         public List<EnemySprite> Enemies { get; set; }
 
-       // public List<TreeSprite> Trees { get; set; }
+        public List<TreeSprite> Trees { get; set; }
 
-        //public List<HouseSprite> Houses { get; set; }
+        public List<HouseSprite> Houses { get; set; }
 
         public AssetsManager AssetsManager { get; }
 
@@ -37,6 +37,8 @@ namespace MonoGameExamenVliegtuig.Objects
         {
             BackgroundPosition = new Vector2(0, 0);
             Enemies = new List<EnemySprite>();
+            Trees = new List<TreeSprite>();
+            Houses = new List<HouseSprite>();
 
             AssetsManager = new AssetsManager(game);
 

@@ -13,5 +13,15 @@ namespace MonoGameExamenVliegtuig.Movementstrategies
         {
             plane.UpdatePositionY(plane.Speed * 2);
         }
+
+        public void update(HouseSprite houseSprite)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void update(TreeSprite treeSprite)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
