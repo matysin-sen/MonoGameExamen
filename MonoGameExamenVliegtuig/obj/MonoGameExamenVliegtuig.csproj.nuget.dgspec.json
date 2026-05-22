@@ -53,13 +53,37 @@
           "framework": "net9.0",
           "targetAlias": "net9.0",
           "dependencies": {
+            "Microsoft.Data.SqlClient": {
+              "target": "Package",
+              "version": "[7.0.1, )"
+            },
+            "Microsoft.Data.SqlClient.Extensions.Abstractions": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[11.0.0-preview.4.26230.115, )"
+            },
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[11.0.0-preview.4.26230.115, )"
+            },
+            "Microsoft.Extensions.Configuration.FileExtensions": {
+              "target": "Package",
+              "version": "[11.0.0-preview.4.26230.115, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[11.0.0-preview.4.26230.115, )"
+            },
             "MonoGame.Content.Builder.Task": {
               "target": "Package",
-              "version": "[3.8.*, )"
+              "version": "[3.8.5-preview.5, )"
             },
             "MonoGame.Framework.DesktopGL": {
               "target": "Package",
-              "version": "[3.8.*, )"
+              "version": "[3.8.5-preview.5, )"
             }
           },
           "imports": [

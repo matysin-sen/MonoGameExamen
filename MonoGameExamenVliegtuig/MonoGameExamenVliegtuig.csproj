@@ -23,7 +23,19 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="MonoGame.Framework.DesktopGL" Version="3.8.*" />
-    <PackageReference Include="MonoGame.Content.Builder.Task" Version="3.8.*" />
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="7.0.1" />
+    <PackageReference Include="Microsoft.Data.SqlClient.Extensions.Abstractions" Version="1.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="11.0.0-preview.4.26230.115" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="11.0.0-preview.4.26230.115" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="11.0.0-preview.4.26230.115" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="11.0.0-preview.4.26230.115" />
+    <PackageReference Include="MonoGame.Framework.DesktopGL" Version="3.8.5-preview.5" />
+    <PackageReference Include="MonoGame.Content.Builder.Task" Version="3.8.5-preview.5" />
   </ItemGroup>
+  <ItemGroup>
+    <None Update="appsettings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ProjectExtensions><VisualStudio><UserProperties appsettings_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>
 </Project>
