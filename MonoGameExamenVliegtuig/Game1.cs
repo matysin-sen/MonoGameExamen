@@ -32,7 +32,7 @@ namespace MonoGameExamenVliegtuig
 
         protected override void Initialize()// Method called when the game initializes(starts)
         {
-            // TODO: Add your initialization logic here
+           
             var builder = new ConfigurationBuilder()
             .SetBasePath(Directory.GetCurrentDirectory())
             .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true);
@@ -51,7 +51,7 @@ namespace MonoGameExamenVliegtuig
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
 
-            // TODO: use this.Content to load your game content here
+            
               base.LoadContent();
         }
 

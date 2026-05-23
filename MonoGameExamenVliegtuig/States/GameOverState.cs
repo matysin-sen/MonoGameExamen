@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using MonoGameExamenVliegtuig.Core.Graphics;
 using MonoGameExamenVliegtuig.Core.Repository;
 using MonoGameExamenVliegtuig.Extentions;
 using MonoGameExamenVliegtuig.Objects;
@@ -59,11 +60,11 @@ namespace MonoGameExamenVliegtuig.States
             Vector2 gameOverSize = font.MeasureString(gameOverText);
             Vector2 scoreSize = font.MeasureString(scoreText);
             Vector2 escapeSize = font.MeasureString(escapeText);
-            float titleX = (400 - gameOverSize.X) / 2f;
-            float scoreX = (400 - scoreSize.X) / 2f;
-            float escapeX = (400 - escapeSize.X) / 2f;
+            float titleX = (GraphicsFacade.GetWindowWidth() - gameOverSize.X) / 2f;
+            float scoreX = (GraphicsFacade.GetWindowWidth() - scoreSize.X) / 2f;
+            float escapeX = (GraphicsFacade.GetWindowWidth() - escapeSize.X) + 150; // Verplaats de escape tekst 150 pixels naar rechts
             spriteBatch.DrawString(font, gameOverText, new Vector2(titleX, 150), Color.Yellow);
-            spriteBatch.DrawString(font, escapeText, new Vector2(escapeX, 200), Color.White);
+            spriteBatch.DrawString(font, escapeText, new Vector2(escapeX, 200), Color.White, 0f, Vector2.Zero, 0.65f, SpriteEffects.None, 0f);
             spriteBatch.DrawString(font, scoreText, new Vector2(scoreX, 250), Color.White);
             if (Context.IsMultiplayer)
             {
@@ -71,7 +72,7 @@ namespace MonoGameExamenVliegtuig.States
                 {
                     string highScoreText = $"High Score {i + 1}: {Scores[i]}";
                     Vector2 highScoreSize = font.MeasureString(highScoreText);
-                    float highScoreX = (400 - highScoreSize.X) / 2f;
+                    float highScoreX = (GraphicsFacade.GetWindowWidth() - highScoreSize.X) / 2f;
                     spriteBatch.DrawString(font, highScoreText, new Vector2(highScoreX, 300 + i * 30), Color.White);
                 }
             }
@@ -81,7 +82,7 @@ namespace MonoGameExamenVliegtuig.States
                 {
                     string highScoreText = $"High Score {i + 1}: {Scores[i]}";
                     Vector2 highScoreSize = font.MeasureString(highScoreText);
-                    float highScoreX = (400 - highScoreSize.X) / 2f;
+                    float highScoreX = (GraphicsFacade.GetWindowWidth() - highScoreSize.X) / 2f;
                     spriteBatch.DrawString(font, highScoreText, new Vector2(highScoreX, 300 + i * 30), Color.White);
                 }
 

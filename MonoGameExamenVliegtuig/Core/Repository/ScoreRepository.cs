@@ -18,7 +18,7 @@ namespace MonoGameExamenVliegtuig.Core.Repository
         {
             _connectionstring = connectionstring;
         }
-
+        // Deze methoden zijn verantwoordelijk voor het uitvoeren van SQL-query's om scores op te halen, in te voegen en bij te werken in de database. Ze maken gebruik van ADO.NET om verbinding te maken met de database, SQL-commando's uit te voeren en resultaten te verwerken.
         public List<int> GetHighScoresSingleplayer()
         {
             List<int> scores = new List<int>();

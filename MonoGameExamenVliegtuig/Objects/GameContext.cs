@@ -47,11 +47,13 @@ namespace MonoGameExamenVliegtuig.Objects
 
             AssetsManager = new AssetsManager(game);
 
-            // Dit moet na LoadContent want we hebben de texture nodig
+            // We maken de speler aan in de constructor van de GameContext, zodat we die kunnen doorgeven aan de verschillende staten. We maken hem aan in het midden van het scherm, zodat we altijd een referentie hebben naar de speler, ook in staten waar we hem niet tekenen (zoals het menu).
             Player = PlayerFactory.CreatePlayerInVerticalCenter(AssetsManager.GetTexture(AssetsNames.PLAYER_TEXTURE),
                                                                 GameSettings.PLAYER_SPEED,
                                                                 GameSettings.PLAYER_SCALE,
                                                                 new PlayerInputService(this));
+
+        
 
             CurrentState = new MenuState(this);
         }
@@ -68,6 +70,42 @@ namespace MonoGameExamenVliegtuig.Objects
         public void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
             CurrentState.Draw(gameTime, spriteBatch);
+        }
+
+        public void ResetGame()
+        {
+            // 1. Reset de score
+            Score = 0;
+
+            // 2. Maak alle lijsten met objecten leeg
+            Enemies.Clear();
+            Trees.Clear();
+            Houses.Clear();
+
+            // 3. Zet de achtergrond weer aan het begin
+            BackgroundPosition = new Vector2(0, 0);
+
+            // 4. Maak de speler(s) opnieuw aan (zodat ze weer in het midden staan en leven)
+            Player = PlayerFactory.CreatePlayerInVerticalCenter(
+                        AssetsManager.GetTexture(AssetsNames.PLAYER_TEXTURE),
+                        GameSettings.PLAYER_SPEED,
+                        GameSettings.PLAYER_SCALE,
+                        new PlayerInputService(this));
+
+            // Controleer of we in multiplayer zaten om speler 2 ook te resetten
+            if (IsMultiplayer)
+            {
+               
+                Player2 = PlayerFactory.CreatePlayerInVerticalCenter(
+                            AssetsManager.GetTexture(AssetsNames.PLAYER_TEXTURE),
+                            GameSettings.PLAYER_SPEED,
+                            GameSettings.PLAYER_SCALE,
+                            new Player2InputService(this));//this want we zitten in game context, dus we kunnen die doorgeven aan de input service zodat die weet welke speler hij moet controleren
+            }
+            else
+            {
+                Player2 = null;
+            }
         }
     }
 }

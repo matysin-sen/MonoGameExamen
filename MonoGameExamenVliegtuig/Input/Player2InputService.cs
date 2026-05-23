@@ -1,5 +1,6 @@
 ﻿using Microsoft.Xna.Framework.Input;
 using MonoGameExamenVliegtuig.Core.Input;
+using MonoGameExamenVliegtuig.Objects;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,6 +11,12 @@ namespace MonoGameExamenVliegtuig.Input
 {
     public class Player2InputService : IPlayerInputService
     {
+        private readonly GameContext _gameContext;
+
+        public Player2InputService(GameContext gameContext)
+        {
+            _gameContext = gameContext;
+        }
         public bool ShouldGoRight()
         {
             return KeyboardFacade.IsKeyDown(Keys.Right);

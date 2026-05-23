@@ -11,13 +11,14 @@ namespace MonoGameExamenVliegtuig.Core.Objects
 {
     public class Sprite
     {
+        
         protected const float NO_SCALE = 1f;//
 
         public Texture2D Texture { get; init; }//initialiseren de texture2d
         public Vector2 Position { get; private set; }
         public float Speed { get; init; }
         public float Scale { get; init; }
-
+       
         public Sprite(Texture2D texture, Vector2 position, float speed, float scale = NO_SCALE)
         {
             Texture = texture;
@@ -25,7 +26,7 @@ namespace MonoGameExamenVliegtuig.Core.Objects
             Speed = speed;
             Scale = scale;
         }
-
+        
         public virtual void Update()
         {
         }

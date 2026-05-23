@@ -17,7 +17,7 @@ namespace MonoGameExamenVliegtuig.Core.Assets
             = new();        //dictionary want we willen de namen er uit halen en dat dan specifieke ding laden
        
         private  Dictionary<string, SpriteFont> _fontAssets;
-
+        // deze klassen is verantwoordelijk voor het beheren van alle assets in het spel
         public AssetsManager(Game game)
         {
             _contentManager = game.Content;

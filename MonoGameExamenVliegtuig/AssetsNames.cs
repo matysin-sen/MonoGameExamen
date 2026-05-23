@@ -8,6 +8,7 @@ namespace MonoGameExamenVliegtuig
 {
     public static class AssetsNames
     {
+        // We gebruiken constanten voor de namen van de assets, zodat we geen typefouten kunnen maken bij het opvragen van een asset. We kunnen deze constanten ook gebruiken in de content pipeline, zodat we zeker weten dat de namen overeenkomen.
         public const string PLAYER_TEXTURE = "plane";
         public const string ENEMY_PLANE1_TEXTURE = "enemy_plane1";
         public const string ENEMY_PLANE2_TEXTURE = "enemy_plane2";

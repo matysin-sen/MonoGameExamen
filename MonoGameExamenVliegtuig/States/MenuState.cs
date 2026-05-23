@@ -1,6 +1,8 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using MonoGameExamenVliegtuig.Core.Assets;
+using MonoGameExamenVliegtuig.Core.Graphics;
 using MonoGameExamenVliegtuig.Extentions;
 using MonoGameExamenVliegtuig.Factories;
 using MonoGameExamenVliegtuig.Input;
@@ -26,17 +28,19 @@ namespace MonoGameExamenVliegtuig.States
         {
             if (IsKeyDown(Keys.NumPad1))// 1 speler
             {
+                Context.ResetGame();
                 Context.ChangeState(new PlayState(Context));
             }
             if (IsKeyDown(Keys.NumPad2))// 2 spelers
             {
+                Context.ResetGame();
                 Context.IsMultiplayer = true;
-                // maak speler 2 aan en zet deze in de context
+                // maak speler 2 aan en zet deze in de context we maken hem hier aan omdat we in de playstate moeten weten of er een player2 is of niet
                 Context.Player2 = PlayerFactory.CreatePlayerInVerticalCenter(
                  Context.AssetsManager.GetTexture(AssetsNames.PLAYER_TEXTURE),
                   GameSettings.PLAYER_SPEED,
                   GameSettings.PLAYER_SCALE,
-                  new Player2InputService());
+                  new Player2InputService(Context));
                 Context.ChangeState(new PlayState(Context));
             }
             if (IsKeyDown(Keys.NumPad3))//topscores
@@ -62,22 +66,22 @@ namespace MonoGameExamenVliegtuig.States
 
             // 4. Centreer en teken de Titel (bovenaan)
             Vector2 titleSize = font.MeasureString(title);
-            float titleX = (400 - titleSize.X) / 2f;
+            float titleX = (GraphicsFacade.GetWindowWidth() - titleSize.X) / 2f;
             spriteBatch.DrawString(font, title, new Vector2(titleX, 150), Color.Yellow);
 
             // 5. Centreer en teken Optie 1
             Vector2 size1 = font.MeasureString(text1);
-            float x1 = (400 - size1.X) / 2f; // 400 is je schermbreedte
+            float x1 = (GraphicsFacade.GetWindowWidth() - size1.X) / 2f; // GraphicsFacade.GetWindowWidth() is je schermbreedte
             spriteBatch.DrawString(font, text1, new Vector2(x1, 250), Color.White);
 
             // 6. Centreer en teken Optie 2
             Vector2 size2 = font.MeasureString(text2);
-            float x2 = (400 - size2.X) / 2f;
+            float x2 = (GraphicsFacade.GetWindowWidth() - size2.X) / 2f;
             spriteBatch.DrawString(font, text2, new Vector2(x2, 300), Color.White);
 
             // 7. Centreer en teken Optie 3
             Vector2 size3 = font.MeasureString(text3);
-            float x3 = (400 - size3.X) / 2f;
+            float x3 = (GraphicsFacade.GetWindowWidth() - size3.X) / 2f;
             spriteBatch.DrawString(font, text3, new Vector2(x3, 350), Color.White);
         }
     }

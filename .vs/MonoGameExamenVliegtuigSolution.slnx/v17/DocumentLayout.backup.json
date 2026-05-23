@@ -58,8 +58,7 @@
               "RelativeToolTip": "MonoGameExamenVliegtuig\\Core\\Objects\\Sprite.cs",
               "ViewState": "AgIAACIAAAAAAAAAAAAwwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-23T14:44:49.172Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-23T14:44:49.172Z"
             },
             {
               "$type": "Document",
@@ -71,8 +70,7 @@
               "RelativeToolTip": "MonoGameExamenVliegtuig\\Core\\Repository\\ScoreRepository.cs",
               "ViewState": "AgIAAIYAAAAAAAAAAAAawKMAAABBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-23T14:26:45.592Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-23T14:26:45.592Z"
             },
             {
               "$type": "Document",
@@ -84,8 +82,7 @@
               "RelativeToolTip": "MonoGameExamenVliegtuig\\Game1.cs",
               "ViewState": "AgIAAB4AAAAAAAAAAAAnwC0AAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-23T13:54:23.17Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-23T13:54:23.17Z"
             },
             {
               "$type": "Document",
@@ -97,8 +94,7 @@
               "RelativeToolTip": "MonoGameExamenVliegtuig\\Core\\Graphics\\GraphicsFacade.cs",
               "ViewState": "AgIAACsAAAAAAAAAAAAkwBgAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-23T13:53:21.613Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-23T13:53:21.613Z"
             },
             {
               "$type": "Document",
@@ -106,9 +102,9 @@
               "Title": "TopScoreState.cs",
               "DocumentMoniker": "C:\\Users\\matys\\source\\repos\\hogent 25-26 programeren basis\\softwareontwerp\\MonoGameExamenVliegtuigSolution\\MonoGameExamen\\MonoGameExamenVliegtuig\\States\\TopScoreState.cs",
               "RelativeDocumentMoniker": "MonoGameExamenVliegtuig\\States\\TopScoreState.cs",
-              "ToolTip": "C:\\Users\\matys\\source\\repos\\hogent 25-26 programeren basis\\softwareontwerp\\MonoGameExamenVliegtuigSolution\\MonoGameExamen\\MonoGameExamenVliegtuig\\States\\TopScoreState.cs*",
-              "RelativeToolTip": "MonoGameExamenVliegtuig\\States\\TopScoreState.cs*",
-              "ViewState": "AgIAACkAAAAAAAAAAAAuwDwAAAB5AAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\matys\\source\\repos\\hogent 25-26 programeren basis\\softwareontwerp\\MonoGameExamenVliegtuigSolution\\MonoGameExamen\\MonoGameExamenVliegtuig\\States\\TopScoreState.cs",
+              "RelativeToolTip": "MonoGameExamenVliegtuig\\States\\TopScoreState.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAuwD4AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-23T13:52:13.517Z",
               "EditorCaption": ""

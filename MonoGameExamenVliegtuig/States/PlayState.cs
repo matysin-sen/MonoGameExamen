@@ -49,12 +49,12 @@ namespace MonoGameExamenVliegtuig.States
 
         public override void Update(GameTime gameTime)
         {
-            // TODO: Zet the background om naar een sprite
+            
             UpdateBackgroundPosition();
 
             Context.Player.Update();
             
-            if (Context.IsMultiplayer== true)// kijken of multiplayer aan staat, zo ja, update dan ook de tweede speler
+            if (Context.IsMultiplayer== true && Context.Player2 != null)// kijken of multiplayer aan staat, zo ja, update dan ook de tweede speler
             {
                 Context.Player2.Update();
             }
@@ -230,7 +230,7 @@ namespace MonoGameExamenVliegtuig.States
 
             Context.Player.Draw(spriteBatch);
 
-            if (Context.IsMultiplayer == true)// kijken of multiplayer aan staat, zo ja, teken dan ook de tweede speler
+            if (Context.IsMultiplayer == true && Context.Player2 != null)// kijken of multiplayer aan staat, zo ja, teken dan ook de tweede speler
             {
                 Context.Player2.Draw(spriteBatch);
             }

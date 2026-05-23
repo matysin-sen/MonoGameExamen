@@ -14,7 +14,6 @@
           "Microsoft.Extensions.Configuration.Abstractions": "11.0.0-preview.4.26230.115",
           "Microsoft.Extensions.Configuration.FileExtensions": "11.0.0-preview.4.26230.115",
           "Microsoft.Extensions.Configuration.Json": "11.0.0-preview.4.26230.115",
-          "MonoGame.Content.Builder.Task": "3.8.5-preview.5",
           "MonoGame.Framework.DesktopGL": "3.8.5-preview.5"
         },
         "runtime": {
@@ -293,10 +292,6 @@
         }
       },
       "Microsoft.Extensions.Primitives/11.0.0-preview.4.26230.115": {
-        "dependencies": {
-          "System.Memory": "4.6.3",
-          "System.Runtime.CompilerServices.Unsafe": "6.1.2"
-        },
         "runtime": {
           "lib/netstandard2.0/Microsoft.Extensions.Primitives.dll": {
             "assemblyVersion": "11.0.0.0",
@@ -377,7 +372,6 @@
           }
         }
       },
-      "MonoGame.Content.Builder.Task/3.8.5-preview.5": {},
       "MonoGame.Framework.DesktopGL/3.8.5-preview.5": {
         "dependencies": {
           "MonoGame.Library.OpenAL": "1.24.3.4",
@@ -485,10 +479,6 @@
         }
       },
       "NVorbis/0.10.4": {
-        "dependencies": {
-          "System.Memory": "4.6.3",
-          "System.ValueTuple": "4.5.0"
-        },
         "runtime": {
           "lib/netstandard2.0/NVorbis.dll": {
             "assemblyVersion": "0.10.4.0",
@@ -496,7 +486,6 @@
           }
         }
       },
-      "System.Buffers/4.6.1": {},
       "System.Configuration.ConfigurationManager/9.0.13": {
         "dependencies": {
           "System.Diagnostics.EventLog": "9.0.13",
@@ -544,11 +533,6 @@
         }
       },
       "System.IO.Pipelines/11.0.0-preview.4.26230.115": {
-        "dependencies": {
-          "System.Buffers": "4.6.1",
-          "System.Memory": "4.6.3",
-          "System.Threading.Tasks.Extensions": "4.6.3"
-        },
         "runtime": {
           "lib/netstandard2.0/System.IO.Pipelines.dll": {
             "assemblyVersion": "11.0.0.0",
@@ -556,8 +540,6 @@
           }
         }
       },
-      "System.Memory/4.6.3": {},
-      "System.Runtime.CompilerServices.Unsafe/6.1.2": {},
       "System.Security.Cryptography.Pkcs/9.0.13": {
         "runtime": {
           "lib/net9.0/System.Security.Cryptography.Pkcs.dll": {
@@ -583,11 +565,6 @@
         }
       },
       "System.Text.Encodings.Web/11.0.0-preview.4.26230.115": {
-        "dependencies": {
-          "System.Buffers": "4.6.1",
-          "System.Memory": "4.6.3",
-          "System.Runtime.CompilerServices.Unsafe": "6.1.2"
-        },
         "runtime": {
           "lib/netstandard2.0/System.Text.Encodings.Web.dll": {
             "assemblyVersion": "11.0.0.0",
@@ -598,12 +575,8 @@
       "System.Text.Json/11.0.0-preview.4.26230.115": {
         "dependencies": {
           "Microsoft.Bcl.AsyncInterfaces": "11.0.0-preview.4.26230.115",
-          "System.Buffers": "4.6.1",
           "System.IO.Pipelines": "11.0.0-preview.4.26230.115",
-          "System.Memory": "4.6.3",
-          "System.Runtime.CompilerServices.Unsafe": "6.1.2",
-          "System.Text.Encodings.Web": "11.0.0-preview.4.26230.115",
-          "System.Threading.Tasks.Extensions": "4.6.3"
+          "System.Text.Encodings.Web": "11.0.0-preview.4.26230.115"
         },
         "runtime": {
           "lib/netstandard2.0/System.Text.Json.dll": {
@@ -611,9 +584,7 @@
             "fileVersion": "11.0.26.23115"
           }
         }
-      },
-      "System.Threading.Tasks.Extensions/4.6.3": {},
-      "System.ValueTuple/4.5.0": {}
+      }
     }
   },
   "libraries": {
@@ -804,13 +775,6 @@
       "path": "microsoft.sqlserver.server/1.0.0",
       "hashPath": "microsoft.sqlserver.server.1.0.0.nupkg.sha512"
     },
-    "MonoGame.Content.Builder.Task/3.8.5-preview.5": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-dSFHznosETUyWhoi0uoR/yl/k/JDO7DoWzGvhrYYpBPwpwo6iuKO3pVWtzGV7v16HPZ2+V7oocX4htx4igOIcg==",
-      "path": "monogame.content.builder.task/3.8.5-preview.5",
-      "hashPath": "monogame.content.builder.task.3.8.5-preview.5.nupkg.sha512"
-    },
     "MonoGame.Framework.DesktopGL/3.8.5-preview.5": {
       "type": "package",
       "serviceable": true,
@@ -838,13 +802,6 @@
       "sha512": "sha512-WYnil3DhQHzjCY0dM9I2B3r1vWip90AOuQd25KE4NrjPQBg0tBJFluRLm5YPnO5ZLDmwrfosY8jCQGQRmWI/Pg==",
       "path": "nvorbis/0.10.4",
       "hashPath": "nvorbis.0.10.4.nupkg.sha512"
-    },
-    "System.Buffers/4.6.1": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-N8GXpmiLMtljq7gwvyS+1QvKT/W2J8sNAvx+HVg4NGmsG/H+2k/y9QI23auLJRterrzCiDH+IWAw4V/GPwsMlw==",
-      "path": "system.buffers/4.6.1",
-      "hashPath": "system.buffers.4.6.1.nupkg.sha512"
     },
     "System.Configuration.ConfigurationManager/9.0.13": {
       "type": "package",
@@ -874,20 +831,6 @@
       "path": "system.io.pipelines/11.0.0-preview.4.26230.115",
       "hashPath": "system.io.pipelines.11.0.0-preview.4.26230.115.nupkg.sha512"
     },
-    "System.Memory/4.6.3": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-qdcDOgnFZY40+Q9876JUHnlHu7bosOHX8XISRoH94fwk6hgaeQGSgfZd8srWRZNt5bV9ZW2TljcegDNxsf+96A==",
-      "path": "system.memory/4.6.3",
-      "hashPath": "system.memory.4.6.3.nupkg.sha512"
-    },
-    "System.Runtime.CompilerServices.Unsafe/6.1.2": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-2hBr6zdbIBTDE3EhK7NSVNdX58uTK6iHW/P/Axmm9sl1xoGSLqDvMtpecn226TNwHByFokYwJmt/aQQNlO5CRw==",
-      "path": "system.runtime.compilerservices.unsafe/6.1.2",
-      "hashPath": "system.runtime.compilerservices.unsafe.6.1.2.nupkg.sha512"
-    },
     "System.Security.Cryptography.Pkcs/9.0.13": {
       "type": "package",
       "serviceable": true,
@@ -915,20 +858,6 @@
       "sha512": "sha512-A5g4EDLco3CFehq4g2McjFfJi7jIxsb2TiiVuctR7f99V1hbLavVkBFOQTLch5xSqehy9Mcgw5u2mE/s7qLULQ==",
       "path": "system.text.json/11.0.0-preview.4.26230.115",
       "hashPath": "system.text.json.11.0.0-preview.4.26230.115.nupkg.sha512"
-    },
-    "System.Threading.Tasks.Extensions/4.6.3": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-7sCiwilJLYbTZELaKnc7RecBBXWXA+xMLQWZKWawBxYjp6DBlSE3v9/UcvKBvr1vv2tTOhipiogM8rRmxlhrVA==",
-      "path": "system.threading.tasks.extensions/4.6.3",
-      "hashPath": "system.threading.tasks.extensions.4.6.3.nupkg.sha512"
-    },
-    "System.ValueTuple/4.5.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-okurQJO6NRE/apDIP23ajJ0hpiNmJ+f0BwOlB/cSqTLQlw5upkf+5+96+iG2Jw40G1fCVCyPz/FhIABUjMR+RQ==",
-      "path": "system.valuetuple/4.5.0",
-      "hashPath": "system.valuetuple.4.5.0.nupkg.sha512"
     }
   }
 }

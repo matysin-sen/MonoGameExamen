@@ -9,6 +9,7 @@ namespace MonoGameExamenVliegtuig.Core.Exeptions
 {
     public class GraphicsFacadeNotInitializedException : Exception
     {
+        //deze klasse is een custom exception die wordt gegooid wanneer de GraphicsFacade niet correct is geïnitialiseerd 
         public static void ThrowIfNull(GraphicsDeviceManager graphics)
         {
             if (graphics == null)

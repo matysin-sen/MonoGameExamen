@@ -58,14 +58,14 @@ namespace MonoGameExamenVliegtuig.States
             // Instructie om terug te keren naar het menu
             string escapeText = "Press ESC to return to menu";
             Vector2 escapeTextSize = font.MeasureString(escapeText);
-            spriteBatch.DrawString(font, escapeText, new Vector2((GraphicsFacade.GetWindowWidth() - escapeTextSize.X)/100, GraphicsFacade.GetWindowHeight() - 50), Color.White, 0f, Vector2.Zero, 0.65f, SpriteEffects.None, 0f);
+            spriteBatch.DrawString(font, escapeText, new Vector2((GraphicsFacade.GetWindowWidth() - escapeTextSize.X)+150, GraphicsFacade.GetWindowHeight() - 50), Color.White, 0f, Vector2.Zero, 0.65f, SpriteEffects.None, 0f);
 
         }
 
         public override void Update(GameTime gameTime)
         {
-            // Ga terug naar het hoofdmenu als de speler op ESCAPE of BACKSPACE drukt
-            if (WasKeyJustPressed(Keys.Escape) || WasKeyJustPressed(Keys.Back))
+            // Ga terug naar het hoofdmenu als de speler op ESCAPE drukt
+            if (WasKeyJustPressed(Keys.Escape))
             {
                 Context.ChangeState(new MenuState(Context));
             }

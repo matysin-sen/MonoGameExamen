@@ -12,7 +12,7 @@ namespace MonoGameExamenVliegtuig.Core.Input
       
             private static KeyboardState _previous;
             private static KeyboardState _current;
-
+        //deze klasse is een facade voor de keyboard input, het houdt bij welke toetsen er zijn ingedrukt en welke net zijn losgelaten
             public static void Update()
             {
                 _previous = _current;
