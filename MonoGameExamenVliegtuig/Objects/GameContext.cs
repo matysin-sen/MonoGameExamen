@@ -18,6 +18,8 @@ namespace MonoGameExamenVliegtuig.Objects
     {
         // We houden bij welke staat de huidige is. Afhankelijk van de staat, zullen we andere dingen doen in de update en draw methodes.
         public AbstractState CurrentState { get; private set; }
+        public string ConnectionString { get; set; }   
+        public string DatabaseType { get; set; }
 
         public PlayerSprite Player { get;  set; }
         public PlayerSprite Player2 { get;  set; }

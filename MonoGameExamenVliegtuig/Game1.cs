@@ -1,4 +1,6 @@
-﻿using Microsoft.Xna.Framework;
+﻿using Microsoft.Data.SqlClient;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using MonoGameExamenVliegtuig.Core.Graphics;
@@ -7,6 +9,7 @@ using MonoGameExamenVliegtuig.Objects;
 using MonoGameExamenVliegtuig.States;
 using MonoGameExamenVliegtuig.States.Base;
 using System;
+using System.IO;
 using System.Runtime.Serialization;
 
 namespace MonoGameExamenVliegtuig
@@ -16,8 +19,6 @@ namespace MonoGameExamenVliegtuig
       private GameContext _gameContext;
         private SpriteBatch _spriteBatch;
 
-       
-        int score = 0;
        
 
         
@@ -32,9 +33,17 @@ namespace MonoGameExamenVliegtuig
         protected override void Initialize()// Method called when the game initializes(starts)
         {
             // TODO: Add your initialization logic here
+            var builder = new ConfigurationBuilder()
+            .SetBasePath(Directory.GetCurrentDirectory())
+            .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true);
+            var configuration = builder.Build();
+            string connectionstring = configuration.GetConnectionString("SQLServerConnection");
+            string databaseType = configuration.GetSection("FileSettings")["databaseType"];
 
+           
             _gameContext = new GameContext(this);
-
+            _gameContext.ConnectionString = connectionstring;
+            _gameContext.DatabaseType = databaseType;
             base.Initialize();
         }
 

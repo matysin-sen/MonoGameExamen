@@ -41,7 +41,7 @@ namespace MonoGameExamenVliegtuig.States
             }
             if (IsKeyDown(Keys.NumPad3))//topscores
             {
-                Context.ChangeState(new PlayState(Context));
+                Context.ChangeState(new TopScoreState(Context));
             }
         }
 

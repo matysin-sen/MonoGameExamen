@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using MonoGameExamenVliegtuig.Core.Repository;
 using MonoGameExamenVliegtuig.Extentions;
 using MonoGameExamenVliegtuig.Objects;
 using MonoGameExamenVliegtuig.States.Base;
@@ -14,9 +15,22 @@ using System.Threading.Tasks;
 namespace MonoGameExamenVliegtuig.States
 {
     public class GameOverState : AbstractState
-    {
+    {   
+        public List<int> Scores;
         public GameOverState(GameContext context) : base(context)
         {
+            ScoreRepository repository = new ScoreRepository(Context.ConnectionString);
+
+            if (Context.IsMultiplayer)//checken of we in multiplayer modus zitten, zodat we de juiste score kunnen updaten
+            {
+                repository.UpdateScoreMultiplayer(Context.Score);
+                Scores = repository.GetHighScoresMultiplayer();
+            }
+            else
+            {
+                repository.UpdateScoreSingleplayer(Context.Score);
+                Scores = repository.GetHighScoresSingleplayer();
+            }
         }
 
         public override void Update(GameTime gameTime)
@@ -36,11 +50,12 @@ namespace MonoGameExamenVliegtuig.States
 
             // 2. Haal het lettertype op
             SpriteFont font = Context.AssetsManager.GetFont(AssetsNames.GAME_FONT);
+            
+
 
             string gameOverText = "Game Over";
             string scoreText = $"Score: {Context.Score}";
             string escapeText = "Press ESC to return to menu";
-            // string highScoreText = $"High Score: {Context.HighScore}"; top 5 moet weergeven 
             Vector2 gameOverSize = font.MeasureString(gameOverText);
             Vector2 scoreSize = font.MeasureString(scoreText);
             Vector2 escapeSize = font.MeasureString(escapeText);
@@ -48,8 +63,30 @@ namespace MonoGameExamenVliegtuig.States
             float scoreX = (400 - scoreSize.X) / 2f;
             float escapeX = (400 - escapeSize.X) / 2f;
             spriteBatch.DrawString(font, gameOverText, new Vector2(titleX, 150), Color.Yellow);
-            spriteBatch.DrawString(font, scoreText, new Vector2(scoreX, 200), Color.White);
-            spriteBatch.DrawString(font, escapeText, new Vector2(escapeX, 250), Color.White);
+            spriteBatch.DrawString(font, escapeText, new Vector2(escapeX, 200), Color.White);
+            spriteBatch.DrawString(font, scoreText, new Vector2(scoreX, 250), Color.White);
+            if (Context.IsMultiplayer)
+            {
+                for (int i = 0; i < Scores.Count; i++)
+                {
+                    string highScoreText = $"High Score {i + 1}: {Scores[i]}";
+                    Vector2 highScoreSize = font.MeasureString(highScoreText);
+                    float highScoreX = (400 - highScoreSize.X) / 2f;
+                    spriteBatch.DrawString(font, highScoreText, new Vector2(highScoreX, 300 + i * 30), Color.White);
+                }
+            }
+            else
+            {
+                for (int i = 0; i < Scores.Count; i++)
+                {
+                    string highScoreText = $"High Score {i + 1}: {Scores[i]}";
+                    Vector2 highScoreSize = font.MeasureString(highScoreText);
+                    float highScoreX = (400 - highScoreSize.X) / 2f;
+                    spriteBatch.DrawString(font, highScoreText, new Vector2(highScoreX, 300 + i * 30), Color.White);
+                }
+
+            }
+
         }
     }
 }

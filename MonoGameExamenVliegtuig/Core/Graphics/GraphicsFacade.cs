@@ -13,6 +13,7 @@ namespace MonoGameExamenVliegtuig.Core.Graphics
         // static want er is er maar 1
         private static GraphicsDeviceManager _graphics;
 
+
         public static void Initialize(Game game)
         {
             _graphics = new GraphicsDeviceManager(game);
@@ -21,6 +22,7 @@ namespace MonoGameExamenVliegtuig.Core.Graphics
         {
             Initialize(game);
             ChangeResolution(width, height);
+       
         }
 
 

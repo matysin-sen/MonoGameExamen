@@ -1,6 +1,9 @@
-﻿using MonoGameExamenVliegtuig.Core.Interface;
+﻿using Microsoft.Data.SqlClient;
+using MonoGameExamenVliegtuig.Core.Interface;
+using MonoGameExamenVliegtuig.Core.Scores;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.Design;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,26 +19,161 @@ namespace MonoGameExamenVliegtuig.Core.Repository
             _connectionstring = connectionstring;
         }
 
-        public void GetHighScoresSingleplayer()
+        public List<int> GetHighScoresSingleplayer()
         {
-            //todo connectie maken met database en de top 5 scores ophalen
+            List<int> scores = new List<int>();
+            string sql = "SELECT TOP 5 Score FROM HighScoreSingleplayer ORDER BY Score DESC";
+
+            using (SqlConnection connection = new SqlConnection(_connectionstring))
+            {
+                SqlCommand command = new SqlCommand(sql, connection);
+                connection.Open();
+
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        int score = reader.GetInt32(0);// Haalt kolomindex 0 op als 32-bits integer
+                        scores.Add(score); // Voeg de score toe aan de lijst
+                    }
+                }
+            }
+            return scores;
         }
 
-        public void GetHighScoresMultiplayer()
+
+        public List<int> GetHighScoresMultiplayer()
         {
-            //todo connectie maken met database en de top 5 scores ophalen
+            List<int> scores = new List<int>();
+            string sql = "SELECT TOP 5 Score FROM HighScoreMultiplayer ORDER BY Score DESC";
+
+            using (SqlConnection connection = new SqlConnection(_connectionstring))
+            {
+                SqlCommand command = new SqlCommand(sql, connection);
+                connection.Open();
+
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        int score = reader.GetInt32(0);
+                        scores.Add(score);
+                    }
+                }
+            }
+            return scores;
         }
 
-        public void UpdateScoreSingleplayer(int score)
+        public void InsertScoreSingleplayer(int score)
         {
-            //todo connectie maken met database en de score opslaan
+           
+            string sql = "INSERT INTO HighScoreSingleplayer (Score) VALUES (@Score)";
+
+            using (SqlConnection connection = new SqlConnection(_connectionstring))
+            {
+                SqlCommand command = new SqlCommand(sql, connection);
+                command.Parameters.AddWithValue("@Score", score);
+                connection.Open();
+                command.ExecuteNonQuery();
+            }
         }
 
-        public void UpdateScoreMultiplayer(int score)
+        public void InsertScoreMultiplayer(int score)
         {
-            //todo connectie maken met database en de score opslaan
+            
+            string sql = "INSERT INTO HighScoreMultiplayer (Score) VALUES (@Score)";
+
+            using (SqlConnection connection = new SqlConnection(_connectionstring))
+            {
+                SqlCommand command = new SqlCommand(sql, connection);
+                command.Parameters.AddWithValue("@Score", score);
+                connection.Open();
+                command.ExecuteNonQuery();
+            }
+        }
+        public void UpdateScoreSingleplayer(int Score)
+        {
+            List<int> scores = GetHighScoresSingleplayer();
+
+            // 2. Als er nog geen 5 scores in de database zitten, doen we gewoon een INSERT
+            if (scores.Count < 5)
+            {
+               InsertScoreSingleplayer(Score);
+                return;
+            }
+            /*
+            for (int i = 0; i < scores.Count; i++)
+            {
+                if (GetHighScoresSingleplayer()[i] < Score)
+                {
+                    if(GetHighScoresSingleplayer()[i+1] < Score)
+                    {
+                        GetHighScoresSingleplayer()[i+1] = Score;
+                    }
+                    if(GetHighScoresSingleplayer()[i] == Score)
+                    {
+                        GetHighScoresSingleplayer()[i] = Score;
+                    }
+                    else
+                    {
+                        GetHighScoresSingleplayer()[i] = Score;
+                    }
+
+                }
+            }*/
+            else
+            {
+                int lowestScore = scores.Min();// gebruiken dat hier omdat de lijst al gesorteerd is van hoog naar laag, dus de laagste score is de laatste in de lijst
+                if (Score > lowestScore)
+                {
+                    // 3. Als de nieuwe score hoger is dan de laagste score in de database, doen we een UPDATE
+                    //gebruik van TOP (1) in de SQL query om alleen de eerste rij te updaten die voldoet aan de voorwaarde, zodat we niet per ongeluk meerdere rijen updaten als er meerdere dezelfde scores zijn
+                    string sqlUpdate = @"UPDATE TOP (1) HighScoreSingleplayer SET Score = @NewScore WHERE Score = @OldScore";
+                    using (SqlConnection connection = new SqlConnection(_connectionstring))
+                    {
+                        SqlCommand command = new SqlCommand(sqlUpdate, connection);
+                        command.Parameters.AddWithValue("@NewScore", Score);
+                        command.Parameters.AddWithValue("@OldScore", lowestScore);
+                        connection.Open();
+                        command.ExecuteNonQuery();
+                    }
+                }
+
+            }
+            
         }
 
+        public void UpdateScoreMultiplayer(int Score)
+        {
+            List<int> scores = GetHighScoresMultiplayer();
+
+            // 2. Als er nog geen 5 scores in de database zitten, doen we gewoon een INSERT
+            if (scores.Count < 5)
+            {
+                InsertScoreMultiplayer(Score);
+                return;
+            }
         
+            else
+            {
+                int lowestScore = scores.Min();// gebruiken dat hier omdat de lijst al gesorteerd is van hoog naar laag, dus de laagste score is de laatste in de lijst
+                if (Score > lowestScore)
+                {
+                    // 3. Als de nieuwe score hoger is dan de laagste score in de database, doen we een UPDATE
+                    //gebruik van TOP (1) in de SQL query om alleen de eerste rij te updaten die voldoet aan de voorwaarde, zodat we niet per ongeluk meerdere rijen updaten als er meerdere dezelfde scores zijn
+                    string sqlUpdate = @"UPDATE TOP (1) HighScoreMultiplayer SET Score = @NewScore WHERE Score = @OldScore";
+                    using (SqlConnection connection = new SqlConnection(_connectionstring))
+                    {
+                        SqlCommand command = new SqlCommand(sqlUpdate, connection);
+                        command.Parameters.AddWithValue("@NewScore", Score);
+                        command.Parameters.AddWithValue("@OldScore", lowestScore);
+                        connection.Open();
+                        command.ExecuteNonQuery();
+                    }
+                }
+
+            }
+        }
+
     }
 }
