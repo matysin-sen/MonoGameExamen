@@ -1,0 +1,309 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="MonoGameExamenVliegtuig.AssetsNames">
+    <Position X="22.25" Y="19" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABQAAAAAAgAAAAAAAQAAAAQAAAEAACAgAA=</HashCode>
+      <FileName>AssetsNames.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MonoGameExamenVliegtuig.Game1">
+    <Position X="7.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAwAAAEAAAAAAAAAAAAAAAIAAAAAAAAQ=</HashCode>
+      <FileName>Game1.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_gameContext" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="MonoGameExamenVliegtuig.GameSettings">
+    <Position X="24.5" Y="16.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIACCAAAAAAAAAIAAEAAAAACAAAAAEAAAAAgAAABBAA=</HashCode>
+      <FileName>GameSettings.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MonoGameExamenVliegtuig.Core.Assets.AssetsManager">
+    <Position X="21.75" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAQAAAAAAAAAAAAAAAAgAAAAgAAAABAAAAAA=</HashCode>
+      <FileName>Core\Assets\AssetsManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MonoGameExamenVliegtuig.Core.Exeptions.GraphicsFacadeNotInitializedException">
+    <Position X="16" Y="14.75" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAA=</HashCode>
+      <FileName>Core\Exeptions\GraphicsFacadeNotInitializedException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MonoGameExamenVliegtuig.Core.Graphics.GraphicsFacade">
+    <Position X="13.75" Y="14.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAQAAAAAAAAAAAAAAEAACAAgAAAAAIAA=</HashCode>
+      <FileName>Core\Graphics\GraphicsFacade.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MonoGameExamenVliegtuig.Core.Input.KeyboardFacade">
+    <Position X="22.5" Y="16.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAREAAAAA=</HashCode>
+      <FileName>Core\Input\KeyboardFacade.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MonoGameExamenVliegtuig.Core.Objects.Sprite">
+    <Position X="11" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAQAAAiAgAAIAAAABAAAAAAAAAAIAAAAAAAA=</HashCode>
+      <FileName>Core\Objects\Sprite.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MonoGameExamenVliegtuig.Core.Repository.ScoreRepository" BaseTypeListCollapsed="true">
+    <Position X="31.75" Y="18.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAAAAAAAAAAAACAACAAAgIAACAAAAAAAA=</HashCode>
+      <FileName>Core\Repository\ScoreRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.935" />
+  </Class>
+  <Class Name="MonoGameExamenVliegtuig.Core.Scores.ScoreManager">
+    <Position X="28.75" Y="15.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAAAAAAAAAAAACAACAAAgAAASAAAAAAAA=</HashCode>
+      <FileName>Core\Scores\ScoreManager.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_scoreRepository" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="MonoGameExamenVliegtuig.Extentions.SpriteBatchExtentions">
+    <Position X="16" Y="12.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Extentions\SpriteBatchExtentions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MonoGameExamenVliegtuig.Factories.EnemyFactory">
+    <Position X="16.5" Y="19" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAAAAAAAAAAAAAgAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>Factories\EnemyFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MonoGameExamenVliegtuig.Factories.PlayerFactory">
+    <Position X="14.25" Y="19" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>Factories\PlayerFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MonoGameExamenVliegtuig.Factories.ScoreRepositoryFactory">
+    <Position X="28.75" Y="18.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Factories\ScoreRepositoryFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MonoGameExamenVliegtuig.Input.Player2InputService" BaseTypeListCollapsed="true">
+    <Position X="15.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQAAAAEAECAAAAAAAAAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>Input\Player2InputService.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_gameContext" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MonoGameExamenVliegtuig.Input.PlayerInputService" BaseTypeListCollapsed="true">
+    <Position X="7.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQAAAAEAECAAAAAAAAAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>Input\PlayerInputService.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_gameContext" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MonoGameExamenVliegtuig.Movementstrategies.DiagonalMovementStrategy" BaseTypeListCollapsed="true">
+    <Position X="10" Y="21" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>Movementstrategies\DiagonalMovementStrategy.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MonoGameExamenVliegtuig.Movementstrategies.FastStraightMovementStrategy" BaseTypeListCollapsed="true">
+    <Position X="6.5" Y="21" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>Movementstrategies\FastStraightMovementStrategy.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MonoGameExamenVliegtuig.Movementstrategies.StraightMovementStrategy" BaseTypeListCollapsed="true">
+    <Position X="8.25" Y="21" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>Movementstrategies\StraightMovementStrategy.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.11" Collapsed="true" />
+  </Class>
+  <Class Name="MonoGameExamenVliegtuig.Objects.Base.EnemySprite">
+    <Position X="9" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Objects\Base\EnemySprite.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MonoGameExamenVliegtuig.Objects.EnemyPlaneSprite">
+    <Position X="6.25" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Objects\EnemyPlaneSprite.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_movementStrategy" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="MonoGameExamenVliegtuig.Objects.GameContext">
+    <Position X="11.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAYCAAAAAAEAJgkAQAAAACAAAAEAAAAAACIAAQAAACA=</HashCode>
+      <FileName>Objects\GameContext.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="AssetsManager" />
+      <Property Name="Player" />
+      <Property Name="CurrentState" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="MonoGameExamenVliegtuig.Objects.HouseSprite">
+    <Position X="9" Y="13" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Objects\HouseSprite.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_movementStrategy" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="MonoGameExamenVliegtuig.Objects.PlayerSprite">
+    <Position X="14.25" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAA=</HashCode>
+      <FileName>Objects\PlayerSprite.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_inputService" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="MonoGameExamenVliegtuig.Objects.TreeSprite">
+    <Position X="11.25" Y="13" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Objects\TreeSprite.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_movementStrategy" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="MonoGameExamenVliegtuig.Spawners.EnemySpawner">
+    <Position X="23.5" Y="8" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAEAAQAAAAAAAAAAAAAAAAAACAAAAAAAAAAEAAE=</HashCode>
+      <FileName>Spawners\EnemySpawner.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MonoGameExamenVliegtuig.Spawners.HouseSpawner">
+    <Position X="21.25" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAEAAAAAAAEAAAAAAAAAAAAAAAAAAEAAAAAEAAE=</HashCode>
+      <FileName>Spawners\HouseSpawner.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MonoGameExamenVliegtuig.Spawners.TreeSpawners">
+    <Position X="18.75" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAEAACAgAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAE=</HashCode>
+      <FileName>Spawners\TreeSpawners.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MonoGameExamenVliegtuig.States.Base.AbstractState">
+    <Position X="26" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAgAAAgAAAAAAAAAAAAAAAAAAAAAAQEAAAAA=</HashCode>
+      <FileName>States\Base\AbstractState.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Context" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="MonoGameExamenVliegtuig.States.GameOverState">
+    <Position X="26.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAggAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>States\GameOverState.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MonoGameExamenVliegtuig.States.MenuState">
+    <Position X="28.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>States\MenuState.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MonoGameExamenVliegtuig.States.PauseMenuState">
+    <Position X="31.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAgAAAAAAAAAAAAAAAAAACAAAAAAAAAA=</HashCode>
+      <FileName>States\PauseMenuState.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="PreviousState" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="MonoGameExamenVliegtuig.States.PlayState">
+    <Position X="22" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAABAAAAAgAAgAAAAAAAAAAAAABAAAAAAAAAACA=</HashCode>
+      <FileName>States\PlayState.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_enemySpawner" />
+      <Field Name="_houseSpawner" />
+      <Field Name="_treeSpawners" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="MonoGameExamenVliegtuig.States.TopScoreState">
+    <Position X="24.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAgAAAAAAgAAAAAAAAAAAAAAAAAAgABA=</HashCode>
+      <FileName>States\TopScoreState.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="MonoGameExamenVliegtuig.Core.Interface.IScoreRepository">
+    <Position X="32" Y="15.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAAAAAAAAAAAACAACAAAgAAACAAAAAAAA=</HashCode>
+      <FileName>Core\Interface\IScoreRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MonoGameExamenVliegtuig.Input.IPlayerInputService">
+    <Position X="13.5" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQAAAAEAACAAAAAAAAAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>Input\IPlayerInputService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MonoGameExamenVliegtuig.Movementstrategies.IPlaneMovementStratagy">
+    <Position X="7.5" Y="18" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>Movementstrategies\IPlaneMovementStratagy.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
