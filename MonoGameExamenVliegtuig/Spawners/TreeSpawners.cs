@@ -17,13 +17,13 @@ namespace MonoGameExamenVliegtuig.Spawners
         private readonly Texture2D[] _treeTexture;//stop ze hier in de array om te kunnen randomizen welke boom er gespawned wordt
         private double _elapsedTimeInMs;
         private Random _random;
-        private float _currentSpawnIntervalInMs; // om wachttijd op te slaan tussen spawns, kan later gebruikt worden om moeilijkheid aan te passen
+        private float _currentSpawnIntervalInMs; // om wachttijd op te slaan tussen spawns
         public TreeSpawners(List<TreeSprite> trees, Texture2D[] treeTexture)
         {
             _trees = trees;
             _treeTexture = treeTexture;
             _random = new Random();
-            _currentSpawnIntervalInMs = _random.Next(750, 3501); // kiest tussen 750ms (0.75s) en 3500ms (3.5s) voor de eerste spawn, kan later aangepast worden voor moeilijkheid
+            _currentSpawnIntervalInMs = _random.Next(750, 3501); // kiest tussen 750ms (0.75s) en 3500ms (3.5s) voor de eerste spawn
         }
 
         public void Update(GameTime gameTime)
@@ -38,13 +38,13 @@ namespace MonoGameExamenVliegtuig.Spawners
                 Texture2D selectedTreeTexture = _treeTexture[randomTextureIndex]; // Geselecteerde boom texture
 
                 // Maak een nieuw huis aan op een random X-positie, bovenaan buiten het scherm (-50)
-                // Let op: check even of jouw TreeSprite constructor hiermee overeenkomt!
+              
                 _trees.Add(EnemyFactory.CreateTree(
                     selectedTreeTexture,
                     randomX,
                     -50,
                     GameSettings.TREES_SPEED, // Snelheid gelijk aan de achtergrond
-                    GameSettings.TREES_SCALE));                          // Scale
+                    GameSettings.TREES_SCALE));// Scale
 
                 _elapsedTimeInMs = 0;
                 _currentSpawnIntervalInMs = _random.Next(750, 3501); // Kies een nieuwe random spawn interval voor de volgende boom

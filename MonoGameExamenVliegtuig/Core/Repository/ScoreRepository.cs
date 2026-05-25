@@ -18,7 +18,7 @@ namespace MonoGameExamenVliegtuig.Core.Repository
         {
             _connectionstring = connectionstring;
         }
-        // Deze methoden zijn verantwoordelijk voor het uitvoeren van SQL-query's om scores op te halen, in te voegen en bij te werken in de database. Ze maken gebruik van ADO.NET om verbinding te maken met de database, SQL-commando's uit te voeren en resultaten te verwerken.
+        
         public List<int> GetHighScoresSingleplayer()
         {
             List<int> scores = new List<int>();
@@ -95,38 +95,19 @@ namespace MonoGameExamenVliegtuig.Core.Repository
         {
             List<int> scores = GetHighScoresSingleplayer();
 
-            // 2. Als er nog geen 5 scores in de database zitten, doen we gewoon een INSERT
+            // Als er nog geen 5 scores in de database zitten, doen we gewoon een INSERT
             if (scores.Count < 5)
             {
                InsertScoreSingleplayer(Score);
                 return;
             }
-            /*
-            for (int i = 0; i < scores.Count; i++)
-            {
-                if (GetHighScoresSingleplayer()[i] < Score)
-                {
-                    if(GetHighScoresSingleplayer()[i+1] < Score)
-                    {
-                        GetHighScoresSingleplayer()[i+1] = Score;
-                    }
-                    if(GetHighScoresSingleplayer()[i] == Score)
-                    {
-                        GetHighScoresSingleplayer()[i] = Score;
-                    }
-                    else
-                    {
-                        GetHighScoresSingleplayer()[i] = Score;
-                    }
-
-                }
-            }*/
+            
             else
             {
                 int lowestScore = scores.Min();// gebruiken dat hier omdat de lijst al gesorteerd is van hoog naar laag, dus de laagste score is de laatste in de lijst
                 if (Score > lowestScore)
                 {
-                    // 3. Als de nieuwe score hoger is dan de laagste score in de database, doen we een UPDATE
+                    //Als de nieuwe score hoger is dan de laagste score in de database, doen we een UPDATE
                     //gebruik van TOP (1) in de SQL query om alleen de eerste rij te updaten die voldoet aan de voorwaarde, zodat we niet per ongeluk meerdere rijen updaten als er meerdere dezelfde scores zijn
                     string sqlUpdate = @"UPDATE TOP (1) HighScoreSingleplayer SET Score = @NewScore WHERE Score = @OldScore";
                     using (SqlConnection connection = new SqlConnection(_connectionstring))
@@ -147,7 +128,7 @@ namespace MonoGameExamenVliegtuig.Core.Repository
         {
             List<int> scores = GetHighScoresMultiplayer();
 
-            // 2. Als er nog geen 5 scores in de database zitten, doen we gewoon een INSERT
+            
             if (scores.Count < 5)
             {
                 InsertScoreMultiplayer(Score);
@@ -159,7 +140,7 @@ namespace MonoGameExamenVliegtuig.Core.Repository
                 int lowestScore = scores.Min();// gebruiken dat hier omdat de lijst al gesorteerd is van hoog naar laag, dus de laagste score is de laatste in de lijst
                 if (Score > lowestScore)
                 {
-                    // 3. Als de nieuwe score hoger is dan de laagste score in de database, doen we een UPDATE
+                    //Als de nieuwe score hoger is dan de laagste score in de database, doen we een UPDATE
                     //gebruik van TOP (1) in de SQL query om alleen de eerste rij te updaten die voldoet aan de voorwaarde, zodat we niet per ongeluk meerdere rijen updaten als er meerdere dezelfde scores zijn
                     string sqlUpdate = @"UPDATE TOP (1) HighScoreMultiplayer SET Score = @NewScore WHERE Score = @OldScore";
                     using (SqlConnection connection = new SqlConnection(_connectionstring))

@@ -15,15 +15,15 @@ namespace MonoGameExamenVliegtuig.Spawners
     {
         private readonly List<EnemySprite> _enemies;
         private readonly Texture2D[] _enemyTexture;
-        private double _elapsedTimeInMs;
+        private double _elapsedTimeInMs;//voorbije tijd sinds laatste spawn, in milliseconden
         private Random _random;
-        private float _currentSpawnIntervalInMs; // om wachttijd op te slaan tussen spawns, kan later gebruikt worden om moeilijkheid aan te passen
+        private float _currentSpawnIntervalInMs; // om wachttijd op te slaan tussen spawns
         public EnemySpawner(List<EnemySprite> enemies, Texture2D[] enemyTexture)
         {
             _enemies = enemies;
             _enemyTexture = enemyTexture;
             _random = new Random();
-            _currentSpawnIntervalInMs = _random.Next(1500, 5501); // kiest tussen 1000ms (1s) en 4000ms (4s) voor de eerste spawn, kan later aangepast worden voor moeilijkheid
+            _currentSpawnIntervalInMs = _random.Next(1500, 5501); // kiest tussen 1500ms (1s) en 5500ms (5s) voor de eerste spawn, kan later aangepast worden voor moeilijkheid
         }
 
         public void Update(GameTime gameTime)
@@ -33,7 +33,7 @@ namespace MonoGameExamenVliegtuig.Spawners
             if (_elapsedTimeInMs >= _currentSpawnIntervalInMs)
             {
              
-                // TODO: Voeg een limiet toe van 8 haaien tegelijk.
+                
 
                 if (_enemies.Count < 8)
                 {

@@ -21,8 +21,7 @@ namespace MonoGameExamenVliegtuig.Factories
 
         public static EnemyPlaneSprite Create(Texture2D texture, Vector2 position, float speed, float scale)
         {
-            // OPGEPAST: De volgende code zal random een movementStrategy genereren, dit is iets wat je meegeeft aan de Create van de Factory en veelal gegenereerd door een klasse
-            // Het hier random genereren is puur om het principe te tonen
+            
             var r = Random.Shared.Next(3);
             IPlaneMovementStratagy movementStrategy = null;
             switch (r)

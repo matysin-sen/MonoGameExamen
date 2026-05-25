@@ -10,8 +10,8 @@ namespace MonoGameExamenVliegtuig
     {
        
 
-        public const int PLAYER_SPEED = 5;// Constant to define the speed of the player
-        public const float PLAYER_SCALE = 1f;// Constant to define the scale of the player sprite, allowing for resizing the player character in the game
+        public const int PLAYER_SPEED = 5;
+        public const float PLAYER_SCALE = 1f;
 
         public const int PLANE_SPEED = 3;
         public const float PLANE_SCALE = 1F;

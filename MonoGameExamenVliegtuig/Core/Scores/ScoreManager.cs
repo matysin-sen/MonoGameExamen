@@ -16,7 +16,7 @@ namespace MonoGameExamenVliegtuig.Core.Scores
         {
             _scoreRepository = scoreRepository;
         }
-        // Deze methoden zijn verantwoordelijk voor het ophalen, invoegen en bijwerken van scores in de database via de IScoreRepository-interface.
+        
         public List<int> GetHighScoresSingleplayer()
         {
             return _scoreRepository.GetHighScoresSingleplayer();

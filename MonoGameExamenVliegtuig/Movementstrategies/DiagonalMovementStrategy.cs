@@ -22,7 +22,7 @@ namespace MonoGameExamenVliegtuig.Movementstrategies
                 richtingX *= 1f; // Verander de richting
             }
             float vliegtuigBreedte = plane.Texture.Width * plane.Scale; // Neem aan dat de breedte van het vliegtuig gelijk is aan de breedte van de texture vermenigvuldigd met de schaal
-            if(plane.Position.X >= GraphicsFacade.GetWindowWidth() - vliegtuigBreedte) // Controleer of het vliegtuig de andere rand van het scherm heeft bereikt (aangenomen dat de schermbreedte 400 is)
+            if(plane.Position.X >= GraphicsFacade.GetWindowWidth() - vliegtuigBreedte) // Controleer of het vliegtuig de andere rand van het scherm heeft bereikt 
             {
                 richtingX = -1f; // Verander de richting
             }

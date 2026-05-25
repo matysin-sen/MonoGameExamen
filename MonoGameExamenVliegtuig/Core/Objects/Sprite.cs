@@ -12,7 +12,7 @@ namespace MonoGameExamenVliegtuig.Core.Objects
     public class Sprite
     {
         
-        protected const float NO_SCALE = 1f;//
+        protected const float NO_SCALE = 1f;
 
         public Texture2D Texture { get; init; }//initialiseren de texture2d
         public Vector2 Position { get; private set; }

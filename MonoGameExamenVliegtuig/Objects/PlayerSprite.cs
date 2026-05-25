@@ -33,7 +33,7 @@ namespace MonoGameExamenVliegtuig.Objects
             if (_inputService.ShouldGoLeft() && Position.X > 0)//zorgt ervoor dat de speler niet voorbij de linkerkant kan 0 omdat dat volledig links is
                 UpdatePositionX(-Speed);
 
-            if (_inputService.ShouldGoUp() && Position.Y > 0)//zet dit hier omdat het private setter zijnt en ik dus niet zomaar kan zeggen Position.Y-- ofzo
+            if (_inputService.ShouldGoUp() && Position.Y > 0)
                 UpdatePositionY(-Speed);
 
             if (_inputService.ShouldGoDown() && Position.Y < GraphicsFacade.GetWindowHeight() - spelerHoogte)

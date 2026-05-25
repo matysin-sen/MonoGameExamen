@@ -35,13 +35,13 @@ namespace MonoGameExamenVliegtuig.Spawners
                 Texture2D selectedHouseTexture = _houseTexture[randomTextureIndex]; // Geselecteerde huis texture
 
                 // Maak een nieuw huis aan op een random X-positie, bovenaan buiten het scherm (-50)
-                // Let op: check even of jouw HouseSprite constructor hiermee overeenkomt!
+               
                 _houses.Add(EnemyFactory.CreateHouse(
                     selectedHouseTexture,
                     randomX,
                     -50,
                     GameSettings.HOUSE_SPEED, // Snelheid gelijk aan de achtergrond
-                    GameSettings.HOUSE_SCALE));                          // Scale
+                    GameSettings.HOUSE_SCALE));// Scale
 
                 _elapsedTimeInMs = 0;
 

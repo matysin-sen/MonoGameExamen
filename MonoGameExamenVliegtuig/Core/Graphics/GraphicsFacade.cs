@@ -58,6 +58,14 @@ namespace MonoGameExamenVliegtuig.Core.Graphics
 
             return _graphics.PreferredBackBufferHeight;
         }
+
+        public static float GetWindowHorizontalCenter()
+        {
+            GraphicsFacadeNotInitializedException.ThrowIfNull(_graphics);
+
+            
+            return _graphics.PreferredBackBufferWidth * 0.5f;
+        }
     }
 }
 

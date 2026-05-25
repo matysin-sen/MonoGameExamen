@@ -82,8 +82,8 @@ namespace MonoGameExamenVliegtuig.States
             _enemySpawner.Update(gameTime);
             _houseSpawner.Update(gameTime);
             _treeSpawners.Update(gameTime); 
-            // --- Controleer botsingen met Vijanden ---
-            // 1. Maak een onzichtbare rechthoek (hitbox) rondom de speler
+            
+            //Maak een onzichtbare rechthoek (hitbox) rondom de speler
             Rectangle playerRect = new Rectangle(
                 (int)Context.Player.Position.X,
                 (int)Context.Player.Position.Y,
@@ -91,7 +91,7 @@ namespace MonoGameExamenVliegtuig.States
                 (int)(Context.Player.Texture.Height * Context.Player.Scale)
             );
 
-            // 2. Loop door alle vijanden heen om te kijken of ze de speler raken
+            //Loop door alle vijanden heen om te kijken of ze de speler raken
             foreach (var enemy in Context.Enemies)
             {
                 // Maak een hitbox rondom de huidige vijand
@@ -102,20 +102,20 @@ namespace MonoGameExamenVliegtuig.States
                     (int)(enemy.Texture.Height * enemy.Scale)
                 );
 
-                // 3. Controleer of de hitbox van de speler die van de vijand raakt (Intersects)
+                //Controleer of de hitbox van de speler die van de vijand raakt = (Intersects)
                 if (playerRect.Intersects(enemyRect))
                 {
-                    // Ja! Ze raken elkaar. Verander de status naar GameOver.
+                    //Ze raken elkaar. Verander de status naar GameOver.
                     Context.ChangeState(new GameOverState(Context));
 
-                    // Zodra je af bent, hoef je de andere vliegtuigen niet meer te checken
+                    
                     break;
                 }
             }
-            // --- Controleer botsingen met Huizen ---
+            //Controleer botsingen met Huizen
             foreach (var house in Context.Houses)
             {
-                // Maak een hitbox rondom het huis
+                //Maak een hitbox rondom het huis
                 Rectangle houseRect = new Rectangle(
                     (int)house.Position.X,
                     (int)house.Position.Y,
@@ -123,18 +123,18 @@ namespace MonoGameExamenVliegtuig.States
                     (int)(house.Texture.Height * house.Scale)
                 );
 
-                // Controleer of de speler het huis raakt
+                //Controleer of de speler het huis raakt
                 if (playerRect.Intersects(houseRect))
                 {
                     Context.ChangeState(new GameOverState(Context));
-                    break; // Stop met zoeken, je bent toch al af
+                    break; //Stop met zoeken
                 }
             }
 
-            // --- Controleer botsingen met Bomen ---
+            //Controleer botsingen met Bomen 
             foreach (var tree in Context.Trees)
             {
-                // Maak een hitbox rondom de boom
+                //Maak een hitbox rondom de boom
                 Rectangle treeRect = new Rectangle(
                     (int)tree.Position.X,
                     (int)tree.Position.Y,
@@ -142,7 +142,7 @@ namespace MonoGameExamenVliegtuig.States
                     (int)(tree.Texture.Height * tree.Scale)
                 );
 
-                // Controleer of de speler de boom raakt
+                //Controleer of de speler de boom raakt
                 if (playerRect.Intersects(treeRect))
                 {
                     Context.ChangeState(new GameOverState(Context));
@@ -150,7 +150,7 @@ namespace MonoGameExamenVliegtuig.States
                 }
             }
            
-            if(Context.IsMultiplayer == true && Context.Player2 != null)// kijken of multiplayer aan staat, zo ja, check dan ook de botsingen voor de tweede speler en kijk ook of player2 niet null is, omdat deze anders nog niet is gemaakt in het begin van het spel, en je dan een null reference error krijgt
+            if(Context.IsMultiplayer == true && Context.Player2 != null)// kijken of multiplayer aan staat, zo ja, check dan ook de botsingen voor de tweede speler 
             {
                 Rectangle player2Rect = new Rectangle(
                 (int)Context.Player2.Position.X,
@@ -246,7 +246,7 @@ namespace MonoGameExamenVliegtuig.States
             var bgTexture = Context.AssetsManager.GetTexture(AssetsNames.BACKGROUND_TEXTURE);
             Context.BackgroundPosition = Context.BackgroundPosition with { X = 0 , Y = Context.BackgroundPosition.Y + GameSettings.BACKGROUND_SPEED };
             // Zodra de afbeelding te ver naar beneden is, zet hem weer terug naar boven
-            if (Context.BackgroundPosition.Y >= bgTexture.Height * GameSettings.BACKGROUND_SCALE) // 650 is de hoogte van je scherm
+            if (Context.BackgroundPosition.Y >= bgTexture.Height * GameSettings.BACKGROUND_SCALE)
             {
                 // Zet de achtergrond weer terug naar boven
                 Context.BackgroundPosition = Context.BackgroundPosition with { Y = 0 };

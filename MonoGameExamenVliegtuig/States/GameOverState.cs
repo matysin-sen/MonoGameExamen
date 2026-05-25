@@ -44,12 +44,12 @@ namespace MonoGameExamenVliegtuig.States
 
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
-            //todo score weergeven en highscore weergeven
+            
 
             var bgTexture = Context.AssetsManager.GetTexture(AssetsNames.BACKGROUND_TEXTURE);
             spriteBatch.Draw(bgTexture, Vector2.Zero, GameSettings.BACKGROUND_SCALE);
 
-            // 2. Haal het lettertype op
+            //Haal het lettertype op
             SpriteFont font = Context.AssetsManager.GetFont(AssetsNames.GAME_FONT);
             
 

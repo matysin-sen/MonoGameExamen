@@ -22,7 +22,7 @@ namespace MonoGameExamenVliegtuig
        
 
         
-        public Game1()// Constructor for the Game1 class
+        public Game1()
         {
             GraphicsFacade.Initialize(this, width: 400, height: 650);
 
@@ -30,7 +30,7 @@ namespace MonoGameExamenVliegtuig
             IsMouseVisible = true;
         }
 
-        protected override void Initialize()// Method called when the game initializes(starts)
+        protected override void Initialize()
         {
            
             var builder = new ConfigurationBuilder()
@@ -47,15 +47,16 @@ namespace MonoGameExamenVliegtuig
             base.Initialize();
         }
 
-        protected override void LoadContent()// Method called when the game loads content images, sounds, etc.
+        protected override void LoadContent()
         {
+        
             _spriteBatch = new SpriteBatch(GraphicsDevice);
 
             
               base.LoadContent();
         }
 
-        protected override void Update(GameTime gameTime)// Method called every frame to update the game logic, such as handling input, moving objects, etc.
+        protected override void Update(GameTime gameTime)
         {
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.X))
                 Exit();
@@ -70,7 +71,7 @@ namespace MonoGameExamenVliegtuig
         }
       
 
-        protected override void Draw(GameTime gameTime)// Method called every frame to draw the game objects on the screen.
+        protected override void Draw(GameTime gameTime)
         {
           GraphicsDevice.Clear(Color.CornflowerBlue);
 
