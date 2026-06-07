@@ -8,16 +8,25 @@
     ".NETCoreApp,Version=v9.0": {
       "MonoGameExamenVliegtuig/1.0.0": {
         "dependencies": {
-          "Microsoft.Data.SqlClient": "7.0.1",
+          "LiteDB": "6.0.0-prerelease.77",
+          "Microsoft.Data.SqlClient": "7.1.0-preview1.26124.5",
           "Microsoft.Data.SqlClient.Extensions.Abstractions": "1.0.0",
           "Microsoft.Extensions.Configuration": "11.0.0-preview.4.26230.115",
           "Microsoft.Extensions.Configuration.Abstractions": "11.0.0-preview.4.26230.115",
           "Microsoft.Extensions.Configuration.FileExtensions": "11.0.0-preview.4.26230.115",
           "Microsoft.Extensions.Configuration.Json": "11.0.0-preview.4.26230.115",
-          "MonoGame.Framework.DesktopGL": "3.8.5-preview.5"
+          "MonoGame.Framework.DesktopGL": "3.8.5-preview.6"
         },
         "runtime": {
           "MonoGameExamenVliegtuig.dll": {}
+        }
+      },
+      "LiteDB/6.0.0-prerelease.77": {
+        "runtime": {
+          "lib/net8.0/LiteDB.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.0.0"
+          }
         }
       },
       "Microsoft.Bcl.AsyncInterfaces/11.0.0-preview.4.26230.115": {
@@ -36,7 +45,7 @@
           }
         }
       },
-      "Microsoft.Data.SqlClient/7.0.1": {
+      "Microsoft.Data.SqlClient/7.1.0-preview1.26124.5": {
         "dependencies": {
           "Microsoft.Bcl.Cryptography": "9.0.13",
           "Microsoft.Data.SqlClient.Extensions.Abstractions": "1.0.0",
@@ -52,7 +61,7 @@
         "runtime": {
           "lib/net9.0/Microsoft.Data.SqlClient.dll": {
             "assemblyVersion": "7.0.0.0",
-            "fileVersion": "7.0.1.26114"
+            "fileVersion": "7.1.0.26124"
           }
         },
         "resources": {
@@ -101,13 +110,13 @@
             "rid": "unix",
             "assetType": "runtime",
             "assemblyVersion": "7.0.0.0",
-            "fileVersion": "7.0.1.26114"
+            "fileVersion": "7.1.0.26124"
           },
           "runtimes/win/lib/net9.0/Microsoft.Data.SqlClient.dll": {
             "rid": "win",
             "assetType": "runtime",
             "assemblyVersion": "7.0.0.0",
-            "fileVersion": "7.0.1.26114"
+            "fileVersion": "7.1.0.26124"
           }
         }
       },
@@ -372,7 +381,7 @@
           }
         }
       },
-      "MonoGame.Framework.DesktopGL/3.8.5-preview.5": {
+      "MonoGame.Framework.DesktopGL/3.8.5-preview.6": {
         "dependencies": {
           "MonoGame.Library.OpenAL": "1.24.3.4",
           "MonoGame.Library.SDL": "2.32.10.2",
@@ -593,6 +602,13 @@
       "serviceable": false,
       "sha512": ""
     },
+    "LiteDB/6.0.0-prerelease.77": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-hxFhbAyP1oWRWMhVHNIMdGqGFHqwfsUfNYsU8BK9MFJb+9lGnwDmyXGse+aY0msY+Lm3EdOzdZ/qn6M6U1ezrQ==",
+      "path": "litedb/6.0.0-prerelease.77",
+      "hashPath": "litedb.6.0.0-prerelease.77.nupkg.sha512"
+    },
     "Microsoft.Bcl.AsyncInterfaces/11.0.0-preview.4.26230.115": {
       "type": "package",
       "serviceable": true,
@@ -607,12 +623,12 @@
       "path": "microsoft.bcl.cryptography/9.0.13",
       "hashPath": "microsoft.bcl.cryptography.9.0.13.nupkg.sha512"
     },
-    "Microsoft.Data.SqlClient/7.0.1": {
+    "Microsoft.Data.SqlClient/7.1.0-preview1.26124.5": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-9jZFXAJ2ThNYK7lhj2RhH7klXVNaWSvZpQncq3bPIOjmHBrdjwgeO4c8wucUVxQwFT8rAA13Z2F2jzoYR7ICDw==",
-      "path": "microsoft.data.sqlclient/7.0.1",
-      "hashPath": "microsoft.data.sqlclient.7.0.1.nupkg.sha512"
+      "sha512": "sha512-mHIcLxD54QXwQSI8r5GC+YAO6Ta6ThFaQHJZA5l0H8QBPQsJmpEKj8LTLeyxjG5XHzyhht6Ezch/AX33ys39Mw==",
+      "path": "microsoft.data.sqlclient/7.1.0-preview1.26124.5",
+      "hashPath": "microsoft.data.sqlclient.7.1.0-preview1.26124.5.nupkg.sha512"
     },
     "Microsoft.Data.SqlClient.Extensions.Abstractions/1.0.0": {
       "type": "package",
@@ -775,12 +791,12 @@
       "path": "microsoft.sqlserver.server/1.0.0",
       "hashPath": "microsoft.sqlserver.server.1.0.0.nupkg.sha512"
     },
-    "MonoGame.Framework.DesktopGL/3.8.5-preview.5": {
+    "MonoGame.Framework.DesktopGL/3.8.5-preview.6": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-kw+rmsjrq7+ZK70nhCcr3ziMo+iYTDzj/zy29gwbs/wbjsFprIx3eu6eCm2YOaw0QVzgaBTjhZxLb3rtop1mIg==",
-      "path": "monogame.framework.desktopgl/3.8.5-preview.5",
-      "hashPath": "monogame.framework.desktopgl.3.8.5-preview.5.nupkg.sha512"
+      "sha512": "sha512-O1xKxaH8ual49llt06uJ7zGjZyDTzzTeYLtnRIehndn4HEOlDupx2UqRWl9hAV4oryChnupA9izDtdqUQ37xbQ==",
+      "path": "monogame.framework.desktopgl/3.8.5-preview.6",
+      "hashPath": "monogame.framework.desktopgl.3.8.5-preview.6.nupkg.sha512"
     },
     "MonoGame.Library.OpenAL/1.24.3.4": {
       "type": "package",

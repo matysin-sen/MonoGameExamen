@@ -3,6 +3,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using MonoGameExamenVliegtuig.Core.Graphics;
 using MonoGameExamenVliegtuig.Core.Repository;
+using MonoGameExamenVliegtuig.Core.Scores;
 using MonoGameExamenVliegtuig.Extentions;
 using MonoGameExamenVliegtuig.Objects;
 using MonoGameExamenVliegtuig.States.Base;
@@ -17,15 +18,16 @@ namespace MonoGameExamenVliegtuig.States
 {
     public class TopScoreState : AbstractState
     {
-        private List<int> SingleplayerScores;
-        private List<int> MultiplayerScores;
+        private ScoreManager ScoreManager;
+        private List<Score> ScoresMultiplayer;
+        private List<Score> ScoresSingleplayer;
+
         private float textsize = 0.5f;
         public TopScoreState(GameContext context) : base(context)
         {
-            ScoreRepository repisitory = new ScoreRepository(context.ConnectionString);
-            SingleplayerScores = repisitory.GetHighScoresSingleplayer();
-            MultiplayerScores = repisitory.GetHighScoresMultiplayer();
-          
+            ScoresMultiplayer = context.ScoreManager.GetHighScoresMultiplayer();
+            ScoresSingleplayer = context.ScoreManager.GetHighScoresSingleplayer();
+
         }
 
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
@@ -41,18 +43,21 @@ namespace MonoGameExamenVliegtuig.States
             string singleplayerTitle = "Singleplayer:";
             Vector2 singleplayerTitleSize = font.MeasureString(singleplayerTitle);
             spriteBatch.DrawString(font, singleplayerTitle, new Vector2(80, 150), Color.White,0f, Vector2.Zero, textsize, SpriteEffects.None, 0f);
-            for (int i = 0; i < SingleplayerScores.Count; i++)//kan hier ook een methode maken die de scores tekent, aangezien dit ook voor multiplayer scores gebeurt
+            
+            for (int i = 0; i < ScoresSingleplayer.Count; i++)//kan hier ook een methode maken die de scores tekent, aangezien dit ook voor multiplayer scores gebeurt
+
             {
-                string scoreText = $"{i + 1}. {SingleplayerScores[i]}";
+                string scoreText = $"{i + 1}. {ScoresSingleplayer[i].Value}";
                 spriteBatch.DrawString(font, scoreText, new Vector2(100, 200 + i * 30), Color.White, 0f, Vector2.Zero, textsize, SpriteEffects.None, 0f);
             }
             // Teken multiplayer scores
             string multiplayerTitle = "Multiplayer:";
             Vector2 multiplayerTitleSize = font.MeasureString(multiplayerTitle);
             spriteBatch.DrawString(font, multiplayerTitle, new Vector2(250, 150), Color.White, 0f, Vector2.Zero, textsize, SpriteEffects.None, 0f);
-            for (int i = 0; i < MultiplayerScores.Count; i++)
+            
+            for (int i = 0; i < ScoresMultiplayer.Count; i++)
             {
-                string scoreText = $"{i + 1}. {MultiplayerScores[i]}";
+                string scoreText = $"{i + 1}. {ScoresMultiplayer[i].Value}";
                 spriteBatch.DrawString(font, scoreText, new Vector2(300, 200 + i * 30), Color.White, 0f, Vector2.Zero, textsize, SpriteEffects.None, 0f);
             }
             // Instructie om terug te keren naar het menu

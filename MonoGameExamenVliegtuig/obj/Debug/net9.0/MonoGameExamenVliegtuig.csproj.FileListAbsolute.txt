@@ -141,3 +141,4 @@ C:\Users\matys\source\repos\hogent 25-26 programeren basis\softwareontwerp\MonoG
 C:\Users\matys\source\repos\hogent 25-26 programeren basis\softwareontwerp\MonoGameExamenVliegtuigSolution\MonoGameExamen\MonoGameExamenVliegtuig\bin\Debug\net9.0\runtimes\win\lib\net9.0\System.Diagnostics.EventLog.Messages.dll
 C:\Users\matys\source\repos\hogent 25-26 programeren basis\softwareontwerp\MonoGameExamenVliegtuigSolution\MonoGameExamen\MonoGameExamenVliegtuig\bin\Debug\net9.0\runtimes\win\lib\net9.0\System.Diagnostics.EventLog.dll
 C:\Users\matys\source\repos\hogent 25-26 programeren basis\softwareontwerp\MonoGameExamenVliegtuigSolution\MonoGameExamen\MonoGameExamenVliegtuig\bin\Debug\net9.0\runtimes\win\lib\net9.0\System.Security.Cryptography.Pkcs.dll
+C:\Users\matys\source\repos\hogent 25-26 programeren basis\softwareontwerp\MonoGameExamenVliegtuigSolution\MonoGameExamen\MonoGameExamenVliegtuig\bin\Debug\net9.0\LiteDB.dll

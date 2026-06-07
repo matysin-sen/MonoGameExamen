@@ -1,6 +1,9 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using MonoGameExamenVliegtuig.Core.Assets;
+using MonoGameExamenVliegtuig.Core.Interface;
+using MonoGameExamenVliegtuig.Core.Repository;
+using MonoGameExamenVliegtuig.Core.Scores;
 using MonoGameExamenVliegtuig.Factories;
 using MonoGameExamenVliegtuig.Input;
 using MonoGameExamenVliegtuig.Objects.Base;
@@ -37,7 +40,10 @@ namespace MonoGameExamenVliegtuig.Objects
 
         public GameSettings gameSettings { get;}
         public int Score { get; set; } = 0;
+        public ScoreManager ScoreManager { get;  set; }
 
+    
+        
         public GameContext(Game game)
         {
             BackgroundPosition = new Vector2(0, 0);
@@ -53,7 +59,9 @@ namespace MonoGameExamenVliegtuig.Objects
                                                                 GameSettings.PLAYER_SCALE,
                                                                 new PlayerInputService(this));
 
-        
+            IScoreRepository repo = new ScoreRepository(); // De nieuwe versie zonder parameters
+            ScoreManager = new ScoreManager(repo);
+
 
             CurrentState = new MenuState(this);
         }

@@ -4,6 +4,7 @@ using Microsoft.Xna.Framework.Input;
 using MonoGameExamenVliegtuig.Core.Graphics;
 using MonoGameExamenVliegtuig.Core.Interface;
 using MonoGameExamenVliegtuig.Core.Repository;
+using MonoGameExamenVliegtuig.Core.Scores;
 using MonoGameExamenVliegtuig.Extentions;
 using MonoGameExamenVliegtuig.Objects;
 using MonoGameExamenVliegtuig.States.Base;
@@ -18,24 +19,28 @@ namespace MonoGameExamenVliegtuig.States
 {
     public class GameOverState : AbstractState
     {   
-        public List<int> Scores;
+        private ScoreManager ScoreManager;
+        private List<Score> Scores;
         public GameOverState(GameContext context) : base(context)
         {
             //ScoreRepository repository = new ScoreRepository(Context.ConnectionString);
 
             if (Context.IsMultiplayer)//checken of we in multiplayer modus zitten, zodat we de juiste score kunnen updaten
             {
-                //repository.UpdateScoreMultiplayer(Context.Score);
-                //Scores = repository.GetHighScoresMultiplayer();
+              
+                Context.ScoreManager.AddScore(Context.Score, true);
+
+                Scores = context.ScoreManager.GetHighScoresMultiplayer();
             }
             else
             {
-                //repository.UpdateScoreSingleplayer(Context.Score);
-                //Scores = repository.GetHighScoresSingleplayer();
+              
+                Context.ScoreManager.AddScore(Context.Score, false);
+                Scores = context.ScoreManager.GetHighScoresSingleplayer();
             }
-            // In je MauiProgram.cs / registratie
-            builder.Services.AddSingleton<IScoreRepository, ScoreRepository>();
+            
         }
+        
 
         public override void Update(GameTime gameTime)
         {
@@ -71,9 +76,10 @@ namespace MonoGameExamenVliegtuig.States
             spriteBatch.DrawString(font, scoreText, new Vector2(scoreX, 250), Color.White);
             if (Context.IsMultiplayer)
             {
+                
                 for (int i = 0; i < Scores.Count; i++)
                 {
-                    string highScoreText = $"High Score {i + 1}: {Scores[i]}";
+                    string highScoreText = $"High Score {i + 1}: {Scores[i].Value}";
                     Vector2 highScoreSize = font.MeasureString(highScoreText);
                     float highScoreX = (GraphicsFacade.GetWindowWidth() - highScoreSize.X) / 2f;
                     spriteBatch.DrawString(font, highScoreText, new Vector2(highScoreX, 300 + i * 30), Color.White);
@@ -81,9 +87,10 @@ namespace MonoGameExamenVliegtuig.States
             }
             else
             {
+                
                 for (int i = 0; i < Scores.Count; i++)
                 {
-                    string highScoreText = $"High Score {i + 1}: {Scores[i]}";
+                    string highScoreText = $"High Score {i + 1}: {Scores[i].Value}";
                     Vector2 highScoreSize = font.MeasureString(highScoreText);
                     float highScoreX = (GraphicsFacade.GetWindowWidth() - highScoreSize.X) / 2f;
                     spriteBatch.DrawString(font, highScoreText, new Vector2(highScoreX, 300 + i * 30), Color.White);

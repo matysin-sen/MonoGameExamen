@@ -11,7 +11,7 @@ namespace MonoGameExamenVliegtuig.Core.Repository
     {
         private const string DatabasePath = "scores.db";
         // Gebruik Lazy zoals in de cursus om de verbinding pas te openen bij gebruik
-        private static Lazy<LiteDatabase> _liteDBScores;
+        private readonly Lazy<LiteDatabase> _liteDBScores;
 
         // Eén collectie "PuntJes" zoals vereist
         private ILiteCollection<Score> PuntJes => _liteDBScores.Value.GetCollection<Score>("PuntJes");

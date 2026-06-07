@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\matys\\source\\repos\\hogent 25-26 programeren basis\\softwareontwerp\\MonoGameExamenVliegtuigSolution\\MonoGameExamen\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{CD16FE28-CD31-CB50-ACE5-D0EFA9AC1660}|MonoGameExamenVliegtuig\\MonoGameExamenVliegtuig.csproj|c:\\users\\matys\\source\\repos\\hogent 25-26 programeren basis\\softwareontwerp\\monogameexamenvliegtuigsolution\\monogameexamen\\monogameexamenvliegtuig\\states\\topscorestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CD16FE28-CD31-CB50-ACE5-D0EFA9AC1660}|MonoGameExamenVliegtuig\\MonoGameExamenVliegtuig.csproj|solutionrelative:monogameexamenvliegtuig\\states\\topscorestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{CD16FE28-CD31-CB50-ACE5-D0EFA9AC1660}|MonoGameExamenVliegtuig\\MonoGameExamenVliegtuig.csproj|c:\\users\\matys\\source\\repos\\hogent 25-26 programeren basis\\softwareontwerp\\monogameexamenvliegtuigsolution\\monogameexamen\\monogameexamenvliegtuig\\states\\gameoverstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CD16FE28-CD31-CB50-ACE5-D0EFA9AC1660}|MonoGameExamenVliegtuig\\MonoGameExamenVliegtuig.csproj|solutionrelative:monogameexamenvliegtuig\\states\\gameoverstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CD16FE28-CD31-CB50-ACE5-D0EFA9AC1660}|MonoGameExamenVliegtuig\\MonoGameExamenVliegtuig.csproj|c:\\users\\matys\\source\\repos\\hogent 25-26 programeren basis\\softwareontwerp\\monogameexamenvliegtuigsolution\\monogameexamen\\monogameexamenvliegtuig\\factories\\scorerepositoryfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CD16FE28-CD31-CB50-ACE5-D0EFA9AC1660}|MonoGameExamenVliegtuig\\MonoGameExamenVliegtuig.csproj|solutionrelative:monogameexamenvliegtuig\\factories\\scorerepositoryfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CD16FE28-CD31-CB50-ACE5-D0EFA9AC1660}|MonoGameExamenVliegtuig\\MonoGameExamenVliegtuig.csproj|c:\\users\\matys\\source\\repos\\hogent 25-26 programeren basis\\softwareontwerp\\monogameexamenvliegtuigsolution\\monogameexamen\\monogameexamenvliegtuig\\objects\\gamecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CD16FE28-CD31-CB50-ACE5-D0EFA9AC1660}|MonoGameExamenVliegtuig\\MonoGameExamenVliegtuig.csproj|solutionrelative:monogameexamenvliegtuig\\objects\\gamecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CD16FE28-CD31-CB50-ACE5-D0EFA9AC1660}|MonoGameExamenVliegtuig\\MonoGameExamenVliegtuig.csproj|c:\\users\\matys\\source\\repos\\hogent 25-26 programeren basis\\softwareontwerp\\monogameexamenvliegtuigsolution\\monogameexamen\\monogameexamenvliegtuig\\core\\scores\\scoremanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -17,6 +21,14 @@
     {
       "AbsoluteMoniker": "D:0:0:{CD16FE28-CD31-CB50-ACE5-D0EFA9AC1660}|MonoGameExamenVliegtuig\\MonoGameExamenVliegtuig.csproj|c:\\users\\matys\\source\\repos\\hogent 25-26 programeren basis\\softwareontwerp\\monogameexamenvliegtuigsolution\\monogameexamen\\monogameexamenvliegtuig\\core\\repository\\scorerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CD16FE28-CD31-CB50-ACE5-D0EFA9AC1660}|MonoGameExamenVliegtuig\\MonoGameExamenVliegtuig.csproj|solutionrelative:monogameexamenvliegtuig\\core\\repository\\scorerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CD16FE28-CD31-CB50-ACE5-D0EFA9AC1660}|MonoGameExamenVliegtuig\\MonoGameExamenVliegtuig.csproj|c:\\users\\matys\\source\\repos\\hogent 25-26 programeren basis\\softwareontwerp\\monogameexamenvliegtuigsolution\\monogameexamen\\monogameexamenvliegtuig\\states\\playstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CD16FE28-CD31-CB50-ACE5-D0EFA9AC1660}|MonoGameExamenVliegtuig\\MonoGameExamenVliegtuig.csproj|solutionrelative:monogameexamenvliegtuig\\states\\playstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CD16FE28-CD31-CB50-ACE5-D0EFA9AC1660}|MonoGameExamenVliegtuig\\MonoGameExamenVliegtuig.csproj|c:\\users\\matys\\source\\repos\\hogent 25-26 programeren basis\\softwareontwerp\\monogameexamenvliegtuigsolution\\monogameexamen\\monogameexamenvliegtuig\\factories\\scorerepositoryfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CD16FE28-CD31-CB50-ACE5-D0EFA9AC1660}|MonoGameExamenVliegtuig\\MonoGameExamenVliegtuig.csproj|solutionrelative:monogameexamenvliegtuig\\factories\\scorerepositoryfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CD16FE28-CD31-CB50-ACE5-D0EFA9AC1660}|MonoGameExamenVliegtuig\\MonoGameExamenVliegtuig.csproj|c:\\users\\matys\\source\\repos\\hogent 25-26 programeren basis\\softwareontwerp\\monogameexamenvliegtuigsolution\\monogameexamen\\monogameexamenvliegtuig\\core\\scores\\score.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -31,16 +43,8 @@
       "RelativeMoniker": "D:0:0:{CD16FE28-CD31-CB50-ACE5-D0EFA9AC1660}|MonoGameExamenVliegtuig\\MonoGameExamenVliegtuig.csproj|solutionrelative:monogameexamenvliegtuig\\spawners\\enemyspawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CD16FE28-CD31-CB50-ACE5-D0EFA9AC1660}|MonoGameExamenVliegtuig\\MonoGameExamenVliegtuig.csproj|c:\\users\\matys\\source\\repos\\hogent 25-26 programeren basis\\softwareontwerp\\monogameexamenvliegtuigsolution\\monogameexamen\\monogameexamenvliegtuig\\objects\\gamecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CD16FE28-CD31-CB50-ACE5-D0EFA9AC1660}|MonoGameExamenVliegtuig\\MonoGameExamenVliegtuig.csproj|solutionrelative:monogameexamenvliegtuig\\objects\\gamecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{CD16FE28-CD31-CB50-ACE5-D0EFA9AC1660}|MonoGameExamenVliegtuig\\MonoGameExamenVliegtuig.csproj|c:\\users\\matys\\source\\repos\\hogent 25-26 programeren basis\\softwareontwerp\\monogameexamenvliegtuigsolution\\monogameexamen\\monogameexamenvliegtuig\\states\\pausemenustate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CD16FE28-CD31-CB50-ACE5-D0EFA9AC1660}|MonoGameExamenVliegtuig\\MonoGameExamenVliegtuig.csproj|solutionrelative:monogameexamenvliegtuig\\states\\pausemenustate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CD16FE28-CD31-CB50-ACE5-D0EFA9AC1660}|MonoGameExamenVliegtuig\\MonoGameExamenVliegtuig.csproj|c:\\users\\matys\\source\\repos\\hogent 25-26 programeren basis\\softwareontwerp\\monogameexamenvliegtuigsolution\\monogameexamen\\monogameexamenvliegtuig\\states\\playstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CD16FE28-CD31-CB50-ACE5-D0EFA9AC1660}|MonoGameExamenVliegtuig\\MonoGameExamenVliegtuig.csproj|solutionrelative:monogameexamenvliegtuig\\states\\playstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CD16FE28-CD31-CB50-ACE5-D0EFA9AC1660}|MonoGameExamenVliegtuig\\MonoGameExamenVliegtuig.csproj|c:\\users\\matys\\source\\repos\\hogent 25-26 programeren basis\\softwareontwerp\\monogameexamenvliegtuigsolution\\monogameexamen\\monogameexamenvliegtuig\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -61,10 +65,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{CD16FE28-CD31-CB50-ACE5-D0EFA9AC1660}|MonoGameExamenVliegtuig\\MonoGameExamenVliegtuig.csproj|c:\\users\\matys\\source\\repos\\hogent 25-26 programeren basis\\softwareontwerp\\monogameexamenvliegtuigsolution\\monogameexamen\\monogameexamenvliegtuig\\spawners\\treespawners.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CD16FE28-CD31-CB50-ACE5-D0EFA9AC1660}|MonoGameExamenVliegtuig\\MonoGameExamenVliegtuig.csproj|solutionrelative:monogameexamenvliegtuig\\spawners\\treespawners.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CD16FE28-CD31-CB50-ACE5-D0EFA9AC1660}|MonoGameExamenVliegtuig\\MonoGameExamenVliegtuig.csproj|c:\\users\\matys\\source\\repos\\hogent 25-26 programeren basis\\softwareontwerp\\monogameexamenvliegtuigsolution\\monogameexamen\\monogameexamenvliegtuig\\states\\topscorestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CD16FE28-CD31-CB50-ACE5-D0EFA9AC1660}|MonoGameExamenVliegtuig\\MonoGameExamenVliegtuig.csproj|solutionrelative:monogameexamenvliegtuig\\states\\topscorestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CD16FE28-CD31-CB50-ACE5-D0EFA9AC1660}|MonoGameExamenVliegtuig\\MonoGameExamenVliegtuig.csproj|c:\\users\\matys\\source\\repos\\hogent 25-26 programeren basis\\softwareontwerp\\monogameexamenvliegtuigsolution\\monogameexamen\\monogameexamenvliegtuig\\gamesettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -173,76 +173,50 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "Score.cs",
-              "DocumentMoniker": "C:\\Users\\matys\\source\\repos\\hogent 25-26 programeren basis\\softwareontwerp\\MonoGameExamenVliegtuigSolution\\MonoGameExamen\\MonoGameExamenVliegtuig\\Core\\Scores\\Score.cs",
-              "RelativeDocumentMoniker": "MonoGameExamenVliegtuig\\Core\\Scores\\Score.cs",
-              "ToolTip": "C:\\Users\\matys\\source\\repos\\hogent 25-26 programeren basis\\softwareontwerp\\MonoGameExamenVliegtuigSolution\\MonoGameExamen\\MonoGameExamenVliegtuig\\Core\\Scores\\Score.cs",
-              "RelativeToolTip": "MonoGameExamenVliegtuig\\Core\\Scores\\Score.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA0AAAA3AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-07T19:00:03.935Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "PlayerInputService.cs",
-              "DocumentMoniker": "C:\\Users\\matys\\source\\repos\\hogent 25-26 programeren basis\\softwareontwerp\\MonoGameExamenVliegtuigSolution\\MonoGameExamen\\MonoGameExamenVliegtuig\\Input\\PlayerInputService.cs",
-              "RelativeDocumentMoniker": "MonoGameExamenVliegtuig\\Input\\PlayerInputService.cs",
-              "ToolTip": "C:\\Users\\matys\\source\\repos\\hogent 25-26 programeren basis\\softwareontwerp\\MonoGameExamenVliegtuigSolution\\MonoGameExamen\\MonoGameExamenVliegtuig\\Input\\PlayerInputService.cs",
-              "RelativeToolTip": "MonoGameExamenVliegtuig\\Input\\PlayerInputService.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAxwBgAAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-18T13:39:54.61Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
               "Title": "ScoreRepository.cs",
               "DocumentMoniker": "C:\\Users\\matys\\source\\repos\\hogent 25-26 programeren basis\\softwareontwerp\\MonoGameExamenVliegtuigSolution\\MonoGameExamen\\MonoGameExamenVliegtuig\\Core\\Repository\\ScoreRepository.cs",
               "RelativeDocumentMoniker": "MonoGameExamenVliegtuig\\Core\\Repository\\ScoreRepository.cs",
               "ToolTip": "C:\\Users\\matys\\source\\repos\\hogent 25-26 programeren basis\\softwareontwerp\\MonoGameExamenVliegtuigSolution\\MonoGameExamen\\MonoGameExamenVliegtuig\\Core\\Repository\\ScoreRepository.cs",
               "RelativeToolTip": "MonoGameExamenVliegtuig\\Core\\Repository\\ScoreRepository.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAYwBgAAAA1AAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAA0AAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-22T14:46:40.638Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "ScoreManager.cs",
               "DocumentMoniker": "C:\\Users\\matys\\source\\repos\\hogent 25-26 programeren basis\\softwareontwerp\\MonoGameExamenVliegtuigSolution\\MonoGameExamen\\MonoGameExamenVliegtuig\\Core\\Scores\\ScoreManager.cs",
               "RelativeDocumentMoniker": "MonoGameExamenVliegtuig\\Core\\Scores\\ScoreManager.cs",
               "ToolTip": "C:\\Users\\matys\\source\\repos\\hogent 25-26 programeren basis\\softwareontwerp\\MonoGameExamenVliegtuigSolution\\MonoGameExamen\\MonoGameExamenVliegtuig\\Core\\Scores\\ScoreManager.cs",
               "RelativeToolTip": "MonoGameExamenVliegtuig\\Core\\Scores\\ScoreManager.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAADwvyMAAAAOAAAAAAAAAA==",
+              "ViewState": "AgIAABgAAAAAAAAAAADwvx4AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-22T14:27:49.66Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 0,
               "Title": "TopScoreState.cs",
               "DocumentMoniker": "C:\\Users\\matys\\source\\repos\\hogent 25-26 programeren basis\\softwareontwerp\\MonoGameExamenVliegtuigSolution\\MonoGameExamen\\MonoGameExamenVliegtuig\\States\\TopScoreState.cs",
               "RelativeDocumentMoniker": "MonoGameExamenVliegtuig\\States\\TopScoreState.cs",
               "ToolTip": "C:\\Users\\matys\\source\\repos\\hogent 25-26 programeren basis\\softwareontwerp\\MonoGameExamenVliegtuigSolution\\MonoGameExamen\\MonoGameExamenVliegtuig\\States\\TopScoreState.cs",
               "RelativeToolTip": "MonoGameExamenVliegtuig\\States\\TopScoreState.cs",
-              "ViewState": "AgIAACoAAAAAAAAAAAAYwEIAAABCAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADgAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-22T14:15:29.018Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "ScoreRepositoryFactory.cs",
               "DocumentMoniker": "C:\\Users\\matys\\source\\repos\\hogent 25-26 programeren basis\\softwareontwerp\\MonoGameExamenVliegtuigSolution\\MonoGameExamen\\MonoGameExamenVliegtuig\\Factories\\ScoreRepositoryFactory.cs",
               "RelativeDocumentMoniker": "MonoGameExamenVliegtuig\\Factories\\ScoreRepositoryFactory.cs",
@@ -250,51 +224,74 @@
               "RelativeToolTip": "MonoGameExamenVliegtuig\\Factories\\ScoreRepositoryFactory.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAABkAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-22T14:44:50.567Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-22T14:44:50.567Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "GameOverState.cs",
               "DocumentMoniker": "C:\\Users\\matys\\source\\repos\\hogent 25-26 programeren basis\\softwareontwerp\\MonoGameExamenVliegtuigSolution\\MonoGameExamen\\MonoGameExamenVliegtuig\\States\\GameOverState.cs",
               "RelativeDocumentMoniker": "MonoGameExamenVliegtuig\\States\\GameOverState.cs",
               "ToolTip": "C:\\Users\\matys\\source\\repos\\hogent 25-26 programeren basis\\softwareontwerp\\MonoGameExamenVliegtuigSolution\\MonoGameExamen\\MonoGameExamenVliegtuig\\States\\GameOverState.cs",
               "RelativeToolTip": "MonoGameExamenVliegtuig\\States\\GameOverState.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAACcAAAA2AAAAAAAAAA==",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAACAAAABJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-18T13:40:10.231Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 5,
               "Title": "PlayState.cs",
               "DocumentMoniker": "C:\\Users\\matys\\source\\repos\\hogent 25-26 programeren basis\\softwareontwerp\\MonoGameExamenVliegtuigSolution\\MonoGameExamen\\MonoGameExamenVliegtuig\\States\\PlayState.cs",
               "RelativeDocumentMoniker": "MonoGameExamenVliegtuig\\States\\PlayState.cs",
               "ToolTip": "C:\\Users\\matys\\source\\repos\\hogent 25-26 programeren basis\\softwareontwerp\\MonoGameExamenVliegtuigSolution\\MonoGameExamen\\MonoGameExamenVliegtuig\\States\\PlayState.cs",
               "RelativeToolTip": "MonoGameExamenVliegtuig\\States\\PlayState.cs",
-              "ViewState": "AgIAAOMAAAAAAAAAAAAgwPgAAABhAAAAAAAAAA==",
+              "ViewState": "AgIAAM8AAAAAAAAAAAAYwPEAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-18T13:40:16.896Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 2,
               "Title": "GameContext.cs",
               "DocumentMoniker": "C:\\Users\\matys\\source\\repos\\hogent 25-26 programeren basis\\softwareontwerp\\MonoGameExamenVliegtuigSolution\\MonoGameExamen\\MonoGameExamenVliegtuig\\Objects\\GameContext.cs",
               "RelativeDocumentMoniker": "MonoGameExamenVliegtuig\\Objects\\GameContext.cs",
               "ToolTip": "C:\\Users\\matys\\source\\repos\\hogent 25-26 programeren basis\\softwareontwerp\\MonoGameExamenVliegtuigSolution\\MonoGameExamen\\MonoGameExamenVliegtuig\\Objects\\GameContext.cs",
               "RelativeToolTip": "MonoGameExamenVliegtuig\\Objects\\GameContext.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAkwEwAAAAcAAAAAAAAAA==",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAACoAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-18T13:39:41.254Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 8,
+              "Title": "PlayerInputService.cs",
+              "DocumentMoniker": "C:\\Users\\matys\\source\\repos\\hogent 25-26 programeren basis\\softwareontwerp\\MonoGameExamenVliegtuigSolution\\MonoGameExamen\\MonoGameExamenVliegtuig\\Input\\PlayerInputService.cs",
+              "RelativeDocumentMoniker": "MonoGameExamenVliegtuig\\Input\\PlayerInputService.cs",
+              "ToolTip": "C:\\Users\\matys\\source\\repos\\hogent 25-26 programeren basis\\softwareontwerp\\MonoGameExamenVliegtuigSolution\\MonoGameExamen\\MonoGameExamenVliegtuig\\Input\\PlayerInputService.cs",
+              "RelativeToolTip": "MonoGameExamenVliegtuig\\Input\\PlayerInputService.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAxwBgAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-18T13:39:54.61Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Score.cs",
+              "DocumentMoniker": "C:\\Users\\matys\\source\\repos\\hogent 25-26 programeren basis\\softwareontwerp\\MonoGameExamenVliegtuigSolution\\MonoGameExamen\\MonoGameExamenVliegtuig\\Core\\Scores\\Score.cs",
+              "RelativeDocumentMoniker": "MonoGameExamenVliegtuig\\Core\\Scores\\Score.cs",
+              "ToolTip": "C:\\Users\\matys\\source\\repos\\hogent 25-26 programeren basis\\softwareontwerp\\MonoGameExamenVliegtuigSolution\\MonoGameExamen\\MonoGameExamenVliegtuig\\Core\\Scores\\Score.cs",
+              "RelativeToolTip": "MonoGameExamenVliegtuig\\Core\\Scores\\Score.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA0AAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-07T19:00:03.935Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
               "Title": "Game1.cs",
               "DocumentMoniker": "C:\\Users\\matys\\source\\repos\\hogent 25-26 programeren basis\\softwareontwerp\\MonoGameExamenVliegtuigSolution\\MonoGameExamen\\MonoGameExamenVliegtuig\\Game1.cs",
               "RelativeDocumentMoniker": "MonoGameExamenVliegtuig\\Game1.cs",
@@ -302,12 +299,11 @@
               "RelativeToolTip": "MonoGameExamenVliegtuig\\Game1.cs",
               "ViewState": "AgIAADsAAAAAAAAAAAAgwBgAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-18T13:40:42.529Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-18T13:40:42.529Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "PauseMenuState.cs",
               "DocumentMoniker": "C:\\Users\\matys\\source\\repos\\hogent 25-26 programeren basis\\softwareontwerp\\MonoGameExamenVliegtuigSolution\\MonoGameExamen\\MonoGameExamenVliegtuig\\States\\PauseMenuState.cs",
               "RelativeDocumentMoniker": "MonoGameExamenVliegtuig\\States\\PauseMenuState.cs",
@@ -315,12 +311,11 @@
               "RelativeToolTip": "MonoGameExamenVliegtuig\\States\\PauseMenuState.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAIBJwBoAAABNAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-18T13:40:14.606Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-18T13:40:14.606Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
               "Title": "EnemySpawner.cs",
               "DocumentMoniker": "C:\\Users\\matys\\source\\repos\\hogent 25-26 programeren basis\\softwareontwerp\\MonoGameExamenVliegtuigSolution\\MonoGameExamen\\MonoGameExamenVliegtuig\\Spawners\\EnemySpawner.cs",
               "RelativeDocumentMoniker": "MonoGameExamenVliegtuig\\Spawners\\EnemySpawner.cs",
@@ -328,12 +323,11 @@
               "RelativeToolTip": "MonoGameExamenVliegtuig\\Spawners\\EnemySpawner.cs",
               "ViewState": "AgIAAA8AAAAAAAAAAIBJwCMAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-18T14:17:50.155Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-18T14:17:50.155Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "MenuState.cs",
               "DocumentMoniker": "C:\\Users\\matys\\source\\repos\\hogent 25-26 programeren basis\\softwareontwerp\\MonoGameExamenVliegtuigSolution\\MonoGameExamen\\MonoGameExamenVliegtuig\\States\\MenuState.cs",
               "RelativeDocumentMoniker": "MonoGameExamenVliegtuig\\States\\MenuState.cs",
@@ -341,12 +335,11 @@
               "RelativeToolTip": "MonoGameExamenVliegtuig\\States\\MenuState.cs",
               "ViewState": "AgIAADMAAAAAAAAAAIBQwFEAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-18T13:40:12.973Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-18T13:40:12.973Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "AbstractState.cs",
               "DocumentMoniker": "C:\\Users\\matys\\source\\repos\\hogent 25-26 programeren basis\\softwareontwerp\\MonoGameExamenVliegtuigSolution\\MonoGameExamen\\MonoGameExamenVliegtuig\\States\\Base\\AbstractState.cs",
               "RelativeDocumentMoniker": "MonoGameExamenVliegtuig\\States\\Base\\AbstractState.cs",
@@ -354,12 +347,11 @@
               "RelativeToolTip": "MonoGameExamenVliegtuig\\States\\Base\\AbstractState.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAIBJwBgAAABOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-18T13:40:11.73Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-18T13:40:11.73Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "TreeSpawners.cs",
               "DocumentMoniker": "C:\\Users\\matys\\source\\repos\\hogent 25-26 programeren basis\\softwareontwerp\\MonoGameExamenVliegtuigSolution\\MonoGameExamen\\MonoGameExamenVliegtuig\\Spawners\\TreeSpawners.cs",
               "RelativeDocumentMoniker": "MonoGameExamenVliegtuig\\Spawners\\TreeSpawners.cs",
@@ -367,12 +359,11 @@
               "RelativeToolTip": "MonoGameExamenVliegtuig\\Spawners\\TreeSpawners.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAowBMAAABaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-18T18:31:15.259Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-18T18:31:15.259Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\matys\\source\\repos\\hogent 25-26 programeren basis\\softwareontwerp\\MonoGameExamenVliegtuigSolution\\MonoGameExamen\\MonoGameExamenVliegtuig\\Program.cs",
               "RelativeDocumentMoniker": "MonoGameExamenVliegtuig\\Program.cs",
@@ -380,8 +371,7 @@
               "RelativeToolTip": "MonoGameExamenVliegtuig\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-18T13:40:46.43Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-18T13:40:46.43Z"
             },
             {
               "$type": "Document",
@@ -393,8 +383,7 @@
               "RelativeToolTip": "MonoGameExamenVliegtuig\\GameSettings.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-18T13:40:44.411Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-18T13:40:44.411Z"
             },
             {
               "$type": "Document",
@@ -406,8 +395,7 @@
               "RelativeToolTip": "MonoGameExamenVliegtuig\\Spawners\\HouseSpawner.cs",
               "ViewState": "AgIAABEAAAAAAAAAAAAxwCsAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-18T14:18:01.758Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-18T14:18:01.758Z"
             },
             {
               "$type": "Document",
@@ -419,8 +407,7 @@
               "RelativeToolTip": "MonoGameExamenVliegtuig\\Objects\\PlayerSprite.cs",
               "ViewState": "AgIAABEAAAAAAAAAAAAxwCMAAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-18T13:39:42.473Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-18T13:39:42.473Z"
             },
             {
               "$type": "Document",
@@ -432,8 +419,7 @@
               "RelativeToolTip": "MonoGameExamenVliegtuig\\Objects\\TreeSprite.cs",
               "ViewState": "AgIAAAQAAAAAAAAAAAAuwBgAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-18T15:33:40.477Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-18T15:33:40.477Z"
             },
             {
               "$type": "Document",
@@ -445,8 +431,7 @@
               "RelativeToolTip": "MonoGameExamenVliegtuig\\Objects\\HouseSprite.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAxwBgAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-18T15:33:59.006Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-18T15:33:59.006Z"
             },
             {
               "$type": "Document",
@@ -458,8 +443,7 @@
               "RelativeToolTip": "MonoGameExamenVliegtuig\\Objects\\EnemyPlaneSprite.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-18T13:39:37.783Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-18T13:39:37.783Z"
             },
             {
               "$type": "Document",
@@ -471,8 +455,7 @@
               "RelativeToolTip": "MonoGameExamenVliegtuig\\Objects\\Base\\EnemySprite.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-18T13:39:40.017Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-18T13:39:40.017Z"
             },
             {
               "$type": "Document",
@@ -484,8 +467,7 @@
               "RelativeToolTip": "MonoGameExamenVliegtuig\\Movementstrategies\\StraightMovementStrategy.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAUwBcAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-18T13:39:56.593Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-18T13:39:56.593Z"
             },
             {
               "$type": "Document",
@@ -497,8 +479,7 @@
               "RelativeToolTip": "MonoGameExamenVliegtuig\\Movementstrategies\\IPlaneMovementStratagy.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-18T13:39:57.276Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-18T13:39:57.276Z"
             },
             {
               "$type": "Document",
@@ -510,8 +491,7 @@
               "RelativeToolTip": "MonoGameExamenVliegtuig\\Movementstrategies\\FastStraightMovementStrategy.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAIBJwA4AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-18T13:41:10.938Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-18T13:41:10.938Z"
             },
             {
               "$type": "Document",
@@ -523,8 +503,7 @@
               "RelativeToolTip": "MonoGameExamenVliegtuig\\Movementstrategies\\DiagonalMovementStrategy.cs",
               "ViewState": "AgIAAA4AAAAAAAAAAAAAwBgAAACiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-18T13:41:09.952Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-18T13:41:09.952Z"
             },
             {
               "$type": "Document",
@@ -536,8 +515,7 @@
               "RelativeToolTip": "MonoGameExamenVliegtuig\\Input\\Player2InputService.cs",
               "ViewState": "AgIAABAAAAAAAAAAAAAQwBIAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-19T16:20:10.677Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-19T16:20:10.677Z"
             },
             {
               "$type": "Document",
@@ -549,8 +527,7 @@
               "RelativeToolTip": "MonoGameExamenVliegtuig\\Input\\IPlayerInputService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-18T13:39:53.139Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-18T13:39:53.139Z"
             },
             {
               "$type": "Document",
@@ -562,8 +539,7 @@
               "RelativeToolTip": "MonoGameExamenVliegtuig\\Factories\\PlayerFactory.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAIBJwBEAAABPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-18T14:26:25.587Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-18T14:26:25.587Z"
             },
             {
               "$type": "Document",
@@ -575,8 +551,7 @@
               "RelativeToolTip": "MonoGameExamenVliegtuig\\Factories\\EnemyFactory.cs",
               "ViewState": "AgIAACEAAAAAAAAAAAAYwDUAAABYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-18T13:41:02.464Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-18T13:41:02.464Z"
             },
             {
               "$type": "Document",
@@ -588,8 +563,7 @@
               "RelativeToolTip": "MonoGameExamenVliegtuig\\Extentions\\SpriteBatchExtentions.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAABQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-18T13:41:00.081Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-18T13:41:00.081Z"
             },
             {
               "$type": "Document",
@@ -601,8 +575,7 @@
               "RelativeToolTip": "MonoGameExamenVliegtuig\\Core\\Objects\\Sprite.cs",
               "ViewState": "AgIAAB4AAAAAAAAAAAAowA4AAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-18T13:40:57.302Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-18T13:40:57.302Z"
             },
             {
               "$type": "Document",
@@ -614,8 +587,7 @@
               "RelativeToolTip": "MonoGameExamenVliegtuig\\Core\\Input\\KeyboardFacade.cs",
               "ViewState": "AgIAAAEAAAAAAAAAAEBVwA4AAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-18T13:40:53.843Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-18T13:40:53.843Z"
             },
             {
               "$type": "Document",
@@ -627,8 +599,7 @@
               "RelativeToolTip": "MonoGameExamenVliegtuig\\Core\\Graphics\\GraphicsFacade.cs",
               "ViewState": "AgIAADAAAAAAAAAAAAAowEEAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-18T13:40:52.387Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-18T13:40:52.387Z"
             },
             {
               "$type": "Document",
@@ -640,8 +611,7 @@
               "RelativeToolTip": "MonoGameExamenVliegtuig\\Core\\Exeptions\\GraphicsFacadeNotInitializedException.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAB6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-18T14:23:41.889Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-18T14:23:41.889Z"
             },
             {
               "$type": "Document",
@@ -653,8 +623,7 @@
               "RelativeToolTip": "MonoGameExamenVliegtuig\\Core\\Assets\\AssetsManager.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-18T13:40:51.104Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-18T13:40:51.104Z"
             },
             {
               "$type": "Document",
@@ -665,8 +634,7 @@
               "ToolTip": "C:\\Users\\matys\\source\\repos\\hogent 25-26 programeren basis\\softwareontwerp\\MonoGameExamenVliegtuigSolution\\MonoGameExamen\\MonoGameExamenVliegtuig\\ClassDiagram1.cd",
               "RelativeToolTip": "MonoGameExamenVliegtuig\\ClassDiagram1.cd",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000463|",
-              "WhenOpened": "2026-05-25T13:27:59.853Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-25T13:27:59.853Z"
             },
             {
               "$type": "Document",
@@ -678,8 +646,7 @@
               "RelativeToolTip": "MonoGameExamenVliegtuig\\AssetsNames.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAD1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-18T13:40:41.629Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-18T13:40:41.629Z"
             },
             {
               "$type": "Document",
@@ -691,8 +658,7 @@
               "RelativeToolTip": "MonoGameExamenVliegtuig\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-05-22T14:04:30.596Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-22T14:04:30.596Z"
             },
             {
               "$type": "Document",
@@ -704,8 +670,7 @@
               "RelativeToolTip": "..\\..\\..\\..\\..\\..\\.nuget\\packages\\monogame.content.builder.task\\3.8.4.1\\build\\MonoGame.Content.Builder.Task.targets",
               "ViewState": "AgIAAJwAAAAAAAAAAAAYwKsAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
-              "WhenOpened": "2026-05-18T13:43:51.253Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-18T13:43:51.253Z"
             }
           ]
         }

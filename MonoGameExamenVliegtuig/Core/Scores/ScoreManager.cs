@@ -29,12 +29,6 @@ namespace MonoGameExamenVliegtuig.Core.Scores
         // De Manager zorgt voor de creatie van het Score-object
         public void AddScore(int scoreValue, bool isMultiplayer)
         {
-            var newScore = new Score
-            {
-                Value = scoreValue,
-                Mode = isMultiplayer ? "multiplayer" : "singleplayer",
-              
-            };
 
             if (isMultiplayer)
                 _scoreRepository.UpdateScoreMultiplayer(scoreValue);
