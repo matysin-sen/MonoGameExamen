@@ -2,6 +2,7 @@
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using MonoGameExamenVliegtuig.Core.Graphics;
+using MonoGameExamenVliegtuig.Core.Interface;
 using MonoGameExamenVliegtuig.Core.Repository;
 using MonoGameExamenVliegtuig.Extentions;
 using MonoGameExamenVliegtuig.Objects;
@@ -20,18 +21,20 @@ namespace MonoGameExamenVliegtuig.States
         public List<int> Scores;
         public GameOverState(GameContext context) : base(context)
         {
-            ScoreRepository repository = new ScoreRepository(Context.ConnectionString);
+            //ScoreRepository repository = new ScoreRepository(Context.ConnectionString);
 
             if (Context.IsMultiplayer)//checken of we in multiplayer modus zitten, zodat we de juiste score kunnen updaten
             {
-                repository.UpdateScoreMultiplayer(Context.Score);
-                Scores = repository.GetHighScoresMultiplayer();
+                //repository.UpdateScoreMultiplayer(Context.Score);
+                //Scores = repository.GetHighScoresMultiplayer();
             }
             else
             {
-                repository.UpdateScoreSingleplayer(Context.Score);
-                Scores = repository.GetHighScoresSingleplayer();
+                //repository.UpdateScoreSingleplayer(Context.Score);
+                //Scores = repository.GetHighScoresSingleplayer();
             }
+            // In je MauiProgram.cs / registratie
+            builder.Services.AddSingleton<IScoreRepository, ScoreRepository>();
         }
 
         public override void Update(GameTime gameTime)

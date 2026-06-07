@@ -2,6 +2,19 @@
   "version": 4,
   "targets": {
     "net9.0": {
+      "LiteDB/6.0.0-prerelease.77": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/LiteDB.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/LiteDB.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Bcl.AsyncInterfaces/11.0.0-preview.4.26230.115": {
         "type": "package",
         "compile": {
@@ -34,12 +47,12 @@
           "buildTransitive/net8.0/_._": {}
         }
       },
-      "Microsoft.Data.SqlClient/7.0.1": {
+      "Microsoft.Data.SqlClient/7.1.0-preview1.26124.5": {
         "type": "package",
         "dependencies": {
           "Microsoft.Bcl.Cryptography": "9.0.13",
-          "Microsoft.Data.SqlClient.Extensions.Abstractions": "1.0.0",
-          "Microsoft.Data.SqlClient.Internal.Logging": "1.0.0",
+          "Microsoft.Data.SqlClient.Extensions.Abstractions": "1.0.0-preview1.26124.5",
+          "Microsoft.Data.SqlClient.Internal.Logging": "1.0.0-preview1.26124.5",
           "Microsoft.Data.SqlClient.SNI.runtime": "6.0.2",
           "Microsoft.Extensions.Caching.Memory": "9.0.13",
           "Microsoft.IdentityModel.JsonWebTokens": "8.16.0",
@@ -522,14 +535,14 @@
           }
         }
       },
-      "MonoGame.Content.Builder.Task/3.8.5-preview.5": {
+      "MonoGame.Content.Builder.Task/3.8.5-preview.6": {
         "type": "package",
         "build": {
           "build/MonoGame.Content.Builder.Task.props": {},
           "build/MonoGame.Content.Builder.Task.targets": {}
         }
       },
-      "MonoGame.Framework.DesktopGL/3.8.5-preview.5": {
+      "MonoGame.Framework.DesktopGL/3.8.5-preview.6": {
         "type": "package",
         "dependencies": {
           "MonoGame.Library.OpenAL": "1.24.3.4",
@@ -864,6 +877,23 @@
     }
   },
   "libraries": {
+    "LiteDB/6.0.0-prerelease.77": {
+      "sha512": "hxFhbAyP1oWRWMhVHNIMdGqGFHqwfsUfNYsU8BK9MFJb+9lGnwDmyXGse+aY0msY+Lm3EdOzdZ/qn6M6U1ezrQ==",
+      "type": "package",
+      "path": "litedb/6.0.0-prerelease.77",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "icon_64x64.png",
+        "lib/net8.0/LiteDB.dll",
+        "lib/net8.0/LiteDB.xml",
+        "lib/netstandard2.0/LiteDB.dll",
+        "lib/netstandard2.0/LiteDB.xml",
+        "litedb.6.0.0-prerelease.77.nupkg.sha512",
+        "litedb.nuspec"
+      ]
+    },
     "Microsoft.Bcl.AsyncInterfaces/11.0.0-preview.4.26230.115": {
       "sha512": "rxq8rzG7x8bjCq57LWkIDAwK+d19OL9rBDdW0s94X5INy7iSwxCYU+dwlzWq3SveUmfrQbjHZ4g7nI+I2fV8sg==",
       "type": "package",
@@ -917,10 +947,10 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "Microsoft.Data.SqlClient/7.0.1": {
-      "sha512": "9jZFXAJ2ThNYK7lhj2RhH7klXVNaWSvZpQncq3bPIOjmHBrdjwgeO4c8wucUVxQwFT8rAA13Z2F2jzoYR7ICDw==",
+    "Microsoft.Data.SqlClient/7.1.0-preview1.26124.5": {
+      "sha512": "mHIcLxD54QXwQSI8r5GC+YAO6Ta6ThFaQHJZA5l0H8QBPQsJmpEKj8LTLeyxjG5XHzyhht6Ezch/AX33ys39Mw==",
       "type": "package",
-      "path": "microsoft.data.sqlclient/7.0.1",
+      "path": "microsoft.data.sqlclient/7.1.0-preview1.26124.5",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -973,7 +1003,7 @@
         "lib/net9.0/zh-Hant/Microsoft.Data.SqlClient.resources.dll",
         "lib/netstandard2.0/Microsoft.Data.SqlClient.dll",
         "lib/netstandard2.0/Microsoft.Data.SqlClient.xml",
-        "microsoft.data.sqlclient.7.0.1.nupkg.sha512",
+        "microsoft.data.sqlclient.7.1.0-preview1.26124.5.nupkg.sha512",
         "microsoft.data.sqlclient.nuspec",
         "ref/net462/Microsoft.Data.SqlClient.dll",
         "ref/net462/Microsoft.Data.SqlClient.xml",
@@ -1630,24 +1660,24 @@
         "microsoft.sqlserver.server.nuspec"
       ]
     },
-    "MonoGame.Content.Builder.Task/3.8.5-preview.5": {
-      "sha512": "dSFHznosETUyWhoi0uoR/yl/k/JDO7DoWzGvhrYYpBPwpwo6iuKO3pVWtzGV7v16HPZ2+V7oocX4htx4igOIcg==",
+    "MonoGame.Content.Builder.Task/3.8.5-preview.6": {
+      "sha512": "Z1h/saiJbsC9Mm+qdnZFuvDIXl69h3UNX/8D7F6E5Wsc5eo9LlVRlYGoPP8hhF1pwALWX77KiwLds4SZz3UHEw==",
       "type": "package",
-      "path": "monogame.content.builder.task/3.8.5-preview.5",
+      "path": "monogame.content.builder.task/3.8.5-preview.6",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "build/MonoGame.Content.Builder.Task.props",
         "build/MonoGame.Content.Builder.Task.targets",
-        "monogame.content.builder.task.3.8.5-preview.5.nupkg.sha512",
+        "monogame.content.builder.task.3.8.5-preview.6.nupkg.sha512",
         "monogame.content.builder.task.nuspec"
       ]
     },
-    "MonoGame.Framework.DesktopGL/3.8.5-preview.5": {
-      "sha512": "kw+rmsjrq7+ZK70nhCcr3ziMo+iYTDzj/zy29gwbs/wbjsFprIx3eu6eCm2YOaw0QVzgaBTjhZxLb3rtop1mIg==",
+    "MonoGame.Framework.DesktopGL/3.8.5-preview.6": {
+      "sha512": "O1xKxaH8ual49llt06uJ7zGjZyDTzzTeYLtnRIehndn4HEOlDupx2UqRWl9hAV4oryChnupA9izDtdqUQ37xbQ==",
       "type": "package",
-      "path": "monogame.framework.desktopgl/3.8.5-preview.5",
+      "path": "monogame.framework.desktopgl/3.8.5-preview.6",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1656,7 +1686,7 @@
         "build/MonoGame.Framework.DesktopGL.targets",
         "lib/net8.0/MonoGame.Framework.dll",
         "lib/net8.0/MonoGame.Framework.xml",
-        "monogame.framework.desktopgl.3.8.5-preview.5.nupkg.sha512",
+        "monogame.framework.desktopgl.3.8.5-preview.6.nupkg.sha512",
         "monogame.framework.desktopgl.nuspec"
       ]
     },
@@ -2140,14 +2170,15 @@
   },
   "projectFileDependencyGroups": {
     "net9.0": [
-      "Microsoft.Data.SqlClient >= 7.0.1",
+      "LiteDB >= 6.0.0-prerelease.77",
+      "Microsoft.Data.SqlClient >= 7.1.0-preview1.26124.5",
       "Microsoft.Data.SqlClient.Extensions.Abstractions >= 1.0.0",
       "Microsoft.Extensions.Configuration >= 11.0.0-preview.4.26230.115",
       "Microsoft.Extensions.Configuration.Abstractions >= 11.0.0-preview.4.26230.115",
       "Microsoft.Extensions.Configuration.FileExtensions >= 11.0.0-preview.4.26230.115",
       "Microsoft.Extensions.Configuration.Json >= 11.0.0-preview.4.26230.115",
-      "MonoGame.Content.Builder.Task >= 3.8.5-preview.5",
-      "MonoGame.Framework.DesktopGL >= 3.8.5-preview.5"
+      "MonoGame.Content.Builder.Task >= 3.8.5-preview.6",
+      "MonoGame.Framework.DesktopGL >= 3.8.5-preview.6"
     ]
   },
   "packageFolders": {
@@ -2203,9 +2234,13 @@
         "framework": "net9.0",
         "targetAlias": "net9.0",
         "dependencies": {
+          "LiteDB": {
+            "target": "Package",
+            "version": "[6.0.0-prerelease.77, )"
+          },
           "Microsoft.Data.SqlClient": {
             "target": "Package",
-            "version": "[7.0.1, )"
+            "version": "[7.1.0-preview1.26124.5, )"
           },
           "Microsoft.Data.SqlClient.Extensions.Abstractions": {
             "target": "Package",
@@ -2229,11 +2264,11 @@
           },
           "MonoGame.Content.Builder.Task": {
             "target": "Package",
-            "version": "[3.8.5-preview.5, )"
+            "version": "[3.8.5-preview.6, )"
           },
           "MonoGame.Framework.DesktopGL": {
             "target": "Package",
-            "version": "[3.8.5-preview.5, )"
+            "version": "[3.8.5-preview.6, )"
           }
         },
         "imports": [

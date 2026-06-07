@@ -1,10 +1,8 @@
-﻿using Microsoft.Extensions.Configuration;
-using MonoGameExamenVliegtuig.Core.Interface;
+﻿using MonoGameExamenVliegtuig.Core.Interface;
+using MonoGameExamenVliegtuig.Core.Scores;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MonoGameExamenVliegtuig.Core.Scores
 {
@@ -16,34 +14,32 @@ namespace MonoGameExamenVliegtuig.Core.Scores
         {
             _scoreRepository = scoreRepository;
         }
-        
-        public List<int> GetHighScoresSingleplayer()
+
+        // We geven nu een lijst van Scores terug in plaats van alleen ints
+        public List<Score> GetHighScoresSingleplayer()
         {
             return _scoreRepository.GetHighScoresSingleplayer();
         }
-        public List<int> GetHighScoresMultiplayer()
+
+        public List<Score> GetHighScoresMultiplayer()
         {
             return _scoreRepository.GetHighScoresMultiplayer();
         }
 
-        public void InsertScoreSingleplayer(int score)
+        // De Manager zorgt voor de creatie van het Score-object
+        public void AddScore(int scoreValue, bool isMultiplayer)
         {
-            _scoreRepository.InsertScoreSingleplayer(score);
-        }
+            var newScore = new Score
+            {
+                Value = scoreValue,
+                Mode = isMultiplayer ? "multiplayer" : "singleplayer",
+              
+            };
 
-        public void InsertScoreMultiplayer(int score)
-        {
-            _scoreRepository.InsertScoreMultiplayer(score);
-        }
-
-        public void UpdateScoreSingleplayer(int score)
-        {
-            _scoreRepository.UpdateScoreSingleplayer(score);
-        }
-
-        public void UpdateScoreMultiplayer(int score)
-        {
-            _scoreRepository.UpdateScoreMultiplayer(score);
+            if (isMultiplayer)
+                _scoreRepository.UpdateScoreMultiplayer(scoreValue);
+            else
+                _scoreRepository.UpdateScoreSingleplayer(scoreValue);
         }
     }
 }

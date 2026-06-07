@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MonoGameExamenVliegtuig.Core.Scores;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,11 +9,13 @@ namespace MonoGameExamenVliegtuig.Core.Interface
 {
     public interface IScoreRepository
     {
-        List<int> GetHighScoresSingleplayer();
-        List<int> GetHighScoresMultiplayer();
-        void InsertScoreSingleplayer(int score);
-        void InsertScoreMultiplayer(int score);
-        void UpdateScoreSingleplayer(int Score);
-        void UpdateScoreMultiplayer(int Score);
+        List<Score> GetHighScoresSingleplayer();
+        List<Score> GetHighScoresMultiplayer();
+        void InsertScoreSingleplayer(Score score);
+        void InsertScoreMultiplayer(Score score);
+        void UpdateScoreSingleplayer(int score);
+        void UpdateScoreMultiplayer(int score);
+        public List<Score> GetHighScores(string mode);
+        public void Dispose();
     }
 }

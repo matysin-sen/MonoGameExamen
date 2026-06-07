@@ -10,6 +10,7 @@ namespace MonoGameExamenVliegtuig.Factories
 {
     public class ScoreRepositoryFactory
     {
+        /*
         public static IScoreRepository CreateScoreRepository(string databaseType, string connectionString)
         {
             switch (databaseType.Trim().ToUpper())
@@ -22,5 +23,6 @@ namespace MonoGameExamenVliegtuig.Factories
                     throw new Exception($"Database type '{databaseType}' wordt niet ondersteund.");
             }
         }
+        */
     }
 }
