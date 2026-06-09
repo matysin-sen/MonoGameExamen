@@ -40,7 +40,7 @@ namespace MonoGameExamenVliegtuig.States
                  Context.AssetsManager.GetTexture(AssetsNames.PLAYER_TEXTURE),
                   GameSettings.PLAYER_SPEED,
                   GameSettings.PLAYER_SCALE,
-                  new Player2InputService(Context));
+                  new Player2InputService());
                 Context.ChangeState(new PlayState(Context));
             }
             if (IsKeyDown(Keys.NumPad3))//topscores

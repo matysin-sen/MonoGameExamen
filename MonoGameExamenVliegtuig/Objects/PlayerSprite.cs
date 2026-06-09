@@ -15,6 +15,7 @@ namespace MonoGameExamenVliegtuig.Objects
     {
         private IPlayerInputService _inputService;
 
+        //bv dependancy injection hier gebruikt 
         public PlayerSprite(Texture2D texture, Vector2 position, float speed, float scale,
                             IPlayerInputService inputService)
             : base(texture, position, speed, scale)

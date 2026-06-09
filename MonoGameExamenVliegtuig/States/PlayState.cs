@@ -1,14 +1,18 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using MonoGameExamenVliegtuig.Core.Assets;
 using MonoGameExamenVliegtuig.Core.Graphics;
 using MonoGameExamenVliegtuig.Extentions;
+using MonoGameExamenVliegtuig.Factories;
+using MonoGameExamenVliegtuig.Input;
 using MonoGameExamenVliegtuig.Objects;
 using MonoGameExamenVliegtuig.Spawners;
 using MonoGameExamenVliegtuig.States.Base;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+
 using System.Text;
 using System.Threading.Tasks;
 
@@ -16,6 +20,7 @@ namespace MonoGameExamenVliegtuig.States
 {
     public  class PlayState : AbstractState
     {
+        // opzich had ik een playstate singpleplayer en multiplayer kunnen maken
         private readonly EnemySpawner _enemySpawner;//spawner van enemys
         private readonly HouseSpawner _houseSpawner;
         private readonly TreeSpawners _treeSpawners;
@@ -44,7 +49,32 @@ namespace MonoGameExamenVliegtuig.States
             context.AssetsManager.GetTexture(AssetsNames.TREE_TEXTURE),
             context.AssetsManager.GetTexture(AssetsNames.TREES_TEXTURE)
         });
+            if (context.IsMultiplayer)
+            {
+                //Maak de speler opnieuw aan (zodat ze weer in het midden staan en leven)
+               context.Player = PlayerFactory.CreatePlayerInVerticalCenter(
+                        context.AssetsManager.GetTexture(AssetsNames.PLAYER_TEXTURE),
+                        GameSettings.PLAYER_SPEED,
+                        GameSettings.PLAYER_SCALE,
+                        new PlayerInputService());
 
+               context.Player2 = PlayerFactory.CreatePlayerInVerticalCenter(
+                            context.AssetsManager.GetTexture(AssetsNames.PLAYER_TEXTURE),
+                            GameSettings.PLAYER_SPEED,
+                            GameSettings.PLAYER_SCALE,
+                            new Player2InputService());// geen context nodig want de speler moet zijn keyboard niet
+                // hier initialiseren 
+            }
+            else
+            {
+                context.Player2 = null;
+
+                context.Player = PlayerFactory.CreatePlayerInVerticalCenter(
+                        context.AssetsManager.GetTexture(AssetsNames.PLAYER_TEXTURE),
+                        GameSettings.PLAYER_SPEED,
+                        GameSettings.PLAYER_SCALE,
+                        new SinglePlayerInputService());
+            }
         }
 
         public override void Update(GameTime gameTime)

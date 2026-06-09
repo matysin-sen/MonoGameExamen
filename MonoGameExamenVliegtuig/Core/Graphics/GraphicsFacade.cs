@@ -10,6 +10,7 @@ namespace MonoGameExamenVliegtuig.Core.Graphics
 {
     public static class GraphicsFacade
     {
+        
         // static want er is er maar 1
         private static GraphicsDeviceManager _graphics;
 

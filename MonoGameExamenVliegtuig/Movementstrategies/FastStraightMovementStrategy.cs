@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace MonoGameExamenVliegtuig.Movementstrategies
 {
-    public class FastStraightMovementStrategy : IPlaneMovementStratagy
+    public class FastStraightMovementStrategy : IPlaneMovementStrategy
     {
         public void update(EnemyPlaneSprite plane)
         {

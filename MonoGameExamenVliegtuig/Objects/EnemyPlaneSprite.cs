@@ -11,11 +11,12 @@ using System.Threading.Tasks;
 
 namespace MonoGameExamenVliegtuig.Objects
 {
-    public class EnemyPlaneSprite : EnemySprite
+    public class EnemyPlaneSprite : EnemySprite //overerving van EnemySprite, want dat is de basis voor alle vijandelijke vliegtuigen
     {
-        private IPlaneMovementStratagy _movementStrategy;
+    
+        private IPlaneMovementStrategy _movementStrategy;
 
-        public EnemyPlaneSprite(Texture2D texture, Vector2 position, float speed,IPlaneMovementStratagy movementStrategy, float scale = 1) : base(texture, position, speed, scale)
+        public EnemyPlaneSprite(Texture2D texture, Vector2 position, float speed,IPlaneMovementStrategy movementStrategy, float scale = 1) : base(texture, position, speed, scale)
         {
             _movementStrategy = movementStrategy;
         }

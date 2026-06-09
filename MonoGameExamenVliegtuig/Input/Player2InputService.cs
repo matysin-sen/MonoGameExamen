@@ -11,11 +11,11 @@ namespace MonoGameExamenVliegtuig.Input
 {
     public class Player2InputService : IPlayerInputService
     {
-        private readonly GameContext _gameContext;
+        
 
-        public Player2InputService(GameContext gameContext)
+        public Player2InputService()
         {
-            _gameContext = gameContext;
+            
         }
         public bool ShouldGoRight()
         {

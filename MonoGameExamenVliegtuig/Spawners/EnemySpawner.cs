@@ -2,6 +2,7 @@
 using Microsoft.Xna.Framework.Graphics;
 using MonoGameExamenVliegtuig.Core.Graphics;
 using MonoGameExamenVliegtuig.Factories;
+using MonoGameExamenVliegtuig.Movementstrategies;
 using MonoGameExamenVliegtuig.Objects.Base;
 using System;
 using System.Collections.Generic;
@@ -32,13 +33,18 @@ namespace MonoGameExamenVliegtuig.Spawners
 
             if (_elapsedTimeInMs >= _currentSpawnIntervalInMs)
             {
-             
-                
-
-                if (_enemies.Count < 8)
+                var r = Random.Shared.Next(3);
+                IPlaneMovementStrategy movementStrategy = null;
+                switch (r)
                 {
-                    // 3. Genereer een willekeurige X-positie tussen 0 en de breedte van je scherm
-                    int randomX = _random.Next(0, (int)GraphicsFacade.GetWindowWidth());
+                    case 0: movementStrategy = new DiagonalMovementStrategy(); break;
+                    case 1: movementStrategy = new StraightMovementStrategy(); break;
+                    case 2: movementStrategy = new FastStraightMovementStrategy(); break;
+                }
+
+
+                // 3. Genereer een willekeurige X-positie tussen 0 en de breedte van je scherm
+                int randomX = _random.Next(0, (int)GraphicsFacade.GetWindowWidth());
                     int randomTextureIndex = _random.Next(0, _enemyTexture.Length);
                     Texture2D selectedTexture = _enemyTexture[randomTextureIndex];
 
@@ -46,13 +52,14 @@ namespace MonoGameExamenVliegtuig.Spawners
                     _enemies.Add(EnemyFactory.Create(
                     selectedTexture,
                     randomX,
-                    -50,
+                    -selectedTexture.Height,
                     GameSettings.PLANE_SPEED,
-                    GameSettings.PLANE_SCALE));
+                    GameSettings.PLANE_SCALE,
+                      movementStrategy));
 
                     _elapsedTimeInMs = 0;
                     _currentSpawnIntervalInMs = _random.Next(1500, 5501); // kies opnieuw een willekeurige spawn interval voor de volgende spawn
-                }
+                
             }
         }
     }

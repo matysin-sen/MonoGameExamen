@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace MonoGameExamenVliegtuig.Movementstrategies
 {
-    public class DiagonalMovementStrategy : IPlaneMovementStratagy
+    public class DiagonalMovementStrategy : IPlaneMovementStrategy
     {
         private float richtingX = 1f; // 1f betekent dat het naar rechts gaat, -1f betekent dat het naar links gaat
 

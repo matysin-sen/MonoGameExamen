@@ -33,17 +33,11 @@ namespace MonoGameExamenVliegtuig
         protected override void Initialize()
         {
            
-            var builder = new ConfigurationBuilder()
-            .SetBasePath(Directory.GetCurrentDirectory())
-            .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true);
-            var configuration = builder.Build();
-            string connectionstring = configuration.GetConnectionString("SQLServerConnection");
-            string databaseType = configuration.GetSection("FileSettings")["databaseType"];
+            
 
            
             _gameContext = new GameContext(this);
-            _gameContext.ConnectionString = connectionstring;
-            _gameContext.DatabaseType = databaseType;
+           
             base.Initialize();
         }
 

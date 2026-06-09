@@ -2,6 +2,7 @@
 using Microsoft.Xna.Framework.Graphics;
 using MonoGameExamenVliegtuig.Core.Graphics;
 using MonoGameExamenVliegtuig.Factories;
+using MonoGameExamenVliegtuig.Movementstrategies;
 using MonoGameExamenVliegtuig.Objects;
 using System;
 using System.Collections.Generic;
@@ -33,6 +34,7 @@ namespace MonoGameExamenVliegtuig.Spawners
             // Spawn bijvoorbeeld elke 2000 milliseconden (2 seconden) een boom
             if (_elapsedTimeInMs >= _currentSpawnIntervalInMs)
             {
+                IPlaneMovementStrategy movementStrategy = new StraightMovementStrategy();
                 int randomX = _random.Next(0, (int)GraphicsFacade.GetWindowWidth());
                 int randomTextureIndex = _random.Next(0, _treeTexture.Length);// Random index voor de boom texture
                 Texture2D selectedTreeTexture = _treeTexture[randomTextureIndex]; // Geselecteerde boom texture
@@ -42,9 +44,10 @@ namespace MonoGameExamenVliegtuig.Spawners
                 _trees.Add(EnemyFactory.CreateTree(
                     selectedTreeTexture,
                     randomX,
-                    -50,
+                    -selectedTreeTexture.Height,
                     GameSettings.TREES_SPEED, // Snelheid gelijk aan de achtergrond
-                    GameSettings.TREES_SCALE));// Scale
+                    GameSettings.TREES_SCALE,
+                    movementStrategy));// Scale
 
                 _elapsedTimeInMs = 0;
                 _currentSpawnIntervalInMs = _random.Next(750, 3501); // Kies een nieuwe random spawn interval voor de volgende boom

@@ -13,6 +13,7 @@ namespace MonoGameExamenVliegtuig.States.Base
 {
     public abstract class AbstractState
     {
+        //gebruik states om ondersheidingen te maken tussen discrete toestand
         protected GameContext Context { get; init; }
         
         public AbstractState(GameContext context)
@@ -26,7 +27,8 @@ namespace MonoGameExamenVliegtuig.States.Base
 
         protected bool IsKeyDown(Keys key1, Keys key2)
             => IsKeyDown(key1) || IsKeyDown(key2);
-        
+        //deze methode nodig voor multiplayer controls?
+
         protected bool IsKeyDown(Keys key)
         => Keyboard.GetState().IsKeyDown(key);
 

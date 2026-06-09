@@ -11,61 +11,38 @@ namespace MonoGameExamenVliegtuig.Input
 {
     public class PlayerInputService: IPlayerInputService
     {
-        private readonly GameContext _gameContext;
-        public PlayerInputService(GameContext gameContext)
+        
+        public PlayerInputService()
         {
-            _gameContext = gameContext;
+            
         }
 
 
         public bool ShouldGoRight()
         {
-            if(_gameContext.IsMultiplayer == true)
-            {
                 return KeyboardFacade.IsKeyDown(Keys.D);
-            }
-            else
-            {
-                return KeyboardFacade.IsKeyDown(Keys.Right, Keys.D);
-            }
-            
         }
 
         public bool ShouldGoLeft()
         {
-            if (_gameContext.IsMultiplayer == true)
-            {
                 return KeyboardFacade.IsKeyDown(Keys.Q);
-            }
-            else
-            {
-                return KeyboardFacade.IsKeyDown(Keys.Left, Keys.Q);
-            }
-               
+
         }
 
         public bool ShouldGoUp()
         {
-            if (_gameContext.IsMultiplayer == true)
-            {
+            
                 return KeyboardFacade.IsKeyDown(Keys.Z);
-            }
-            else
-            {
-                return KeyboardFacade.IsKeyDown(Keys.Up, Keys.Z);
-            }
+            
+           
         }
 
         public bool ShouldGoDown()
         {
-            if (_gameContext.IsMultiplayer == true)
-            {
+            
                 return KeyboardFacade.IsKeyDown(Keys.S);
-            }
-            else
-            {
-                return KeyboardFacade.IsKeyDown(Keys.Down, Keys.S);
-            }
+            
+           
         }
 
         public bool shutDown()

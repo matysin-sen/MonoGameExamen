@@ -2,6 +2,7 @@
 using Microsoft.Xna.Framework.Graphics;
 using MonoGameExamenVliegtuig.Core.Graphics;
 using MonoGameExamenVliegtuig.Factories;
+using MonoGameExamenVliegtuig.Movementstrategies;
 using MonoGameExamenVliegtuig.Objects;
 using System;
 using System.Collections.Generic;
@@ -26,7 +27,7 @@ namespace MonoGameExamenVliegtuig.Spawners
         public void Update(GameTime gameTime)
         {
             _elapsedTimeInMs += gameTime.ElapsedGameTime.TotalMilliseconds;
-
+            IPlaneMovementStrategy movementStrategy = new StraightMovementStrategy();
             // Spawn bijvoorbeeld elke 2000 milliseconden (2 seconden) een huis
             if (_elapsedTimeInMs >= _currentSpawnIntervalInMs)
             {
@@ -34,14 +35,15 @@ namespace MonoGameExamenVliegtuig.Spawners
                 int randomTextureIndex = _random.Next(0, _houseTexture.Length);// Random index voor de huis texture
                 Texture2D selectedHouseTexture = _houseTexture[randomTextureIndex]; // Geselecteerde huis texture
 
-                // Maak een nieuw huis aan op een random X-positie, bovenaan buiten het scherm (-50)
+                // Maak een nieuw huis aan op een random X-positie, bovenaan buiten het scherm 
                
                 _houses.Add(EnemyFactory.CreateHouse(
                     selectedHouseTexture,
                     randomX,
-                    -50,
+                    -selectedHouseTexture.Height,
                     GameSettings.HOUSE_SPEED, // Snelheid gelijk aan de achtergrond
-                    GameSettings.HOUSE_SCALE));// Scale
+                    GameSettings.HOUSE_SCALE,// Schaal van het huis
+                    movementStrategy));// movement strategy meegeven zodat het huis weet hoe het moet bewegen
 
                 _elapsedTimeInMs = 0;
 

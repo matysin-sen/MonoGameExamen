@@ -83,7 +83,6 @@ C:\Users\matys\source\repos\hogent 25-26 programeren basis\softwareontwerp\MonoG
 C:\Users\matys\source\repos\hogent 25-26 programeren basis\softwareontwerp\MonoGameExamenVliegtuigSolution\MonoGameExamen\MonoGameExamenVliegtuig\obj\Debug\net9.0\MonoGame.FDAB0BAE.Up2Date
 C:\Users\matys\source\repos\hogent 25-26 programeren basis\softwareontwerp\MonoGameExamenVliegtuigSolution\MonoGameExamen\MonoGameExamenVliegtuig\obj\Debug\net9.0\MonoGameExamenVliegtuig.genruntimeconfig.cache
 C:\Users\matys\source\repos\hogent 25-26 programeren basis\softwareontwerp\MonoGameExamenVliegtuigSolution\MonoGameExamen\MonoGameExamenVliegtuig\obj\Debug\net9.0\ref\MonoGameExamenVliegtuig.dll
-C:\Users\matys\source\repos\hogent 25-26 programeren basis\softwareontwerp\MonoGameExamenVliegtuigSolution\MonoGameExamen\MonoGameExamenVliegtuig\bin\Debug\net9.0\appsettings.json
 C:\Users\matys\source\repos\hogent 25-26 programeren basis\softwareontwerp\MonoGameExamenVliegtuigSolution\MonoGameExamen\MonoGameExamenVliegtuig\bin\Debug\net9.0\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\matys\source\repos\hogent 25-26 programeren basis\softwareontwerp\MonoGameExamenVliegtuigSolution\MonoGameExamen\MonoGameExamenVliegtuig\bin\Debug\net9.0\Microsoft.Bcl.Cryptography.dll
 C:\Users\matys\source\repos\hogent 25-26 programeren basis\softwareontwerp\MonoGameExamenVliegtuigSolution\MonoGameExamen\MonoGameExamenVliegtuig\bin\Debug\net9.0\Microsoft.Data.SqlClient.dll

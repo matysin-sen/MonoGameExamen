@@ -11,6 +11,7 @@ namespace MonoGameExamenVliegtuig.Core.Assets
 {
     public class AssetsManager
     {
+        
         private ContentManager _contentManager;
 
         private Dictionary<string, Texture2D> _textures

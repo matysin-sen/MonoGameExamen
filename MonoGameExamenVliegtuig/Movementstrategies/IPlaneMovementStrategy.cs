@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace MonoGameExamenVliegtuig.Movementstrategies
 {
-    public interface IPlaneMovementStratagy
+    public interface IPlaneMovementStrategy
     {
         void update(EnemyPlaneSprite plane);
         void update(HouseSprite houseSprite);

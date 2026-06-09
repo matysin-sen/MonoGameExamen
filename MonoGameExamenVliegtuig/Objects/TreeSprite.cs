@@ -12,10 +12,10 @@ namespace MonoGameExamenVliegtuig.Objects
 {
     public class TreeSprite : EnemySprite
     {
-        private IPlaneMovementStratagy _movementStrategy;
+        private IPlaneMovementStrategy _movementStrategy;
        
     
-        public TreeSprite(Texture2D texture, Vector2 position, float speed, IPlaneMovementStratagy movementStrategy, float scale = 1) : base(texture, position, speed, scale)
+        public TreeSprite(Texture2D texture, Vector2 position, float speed, IPlaneMovementStrategy movementStrategy, float scale = 1) : base(texture, position, speed, scale)
         {
             _movementStrategy = movementStrategy;
         }

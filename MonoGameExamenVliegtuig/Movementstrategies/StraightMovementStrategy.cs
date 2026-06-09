@@ -7,8 +7,9 @@ using System.Threading.Tasks;
 
 namespace MonoGameExamenVliegtuig.Movementstrategies
 {
-    public class StraightMovementStrategy : IPlaneMovementStratagy
+    public class StraightMovementStrategy : IPlaneMovementStrategy
     {
+        //gebruik stategy parttern om de gedrag van de enemys te veranderen zonder dat de enymy class zelf hoeft te veranderen en weet hoe hij beweegt
         public void update(EnemyPlaneSprite plane)
         {
                 plane.UpdatePositionY(plane.Speed);
